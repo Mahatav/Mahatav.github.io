@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "../data/portfolio.json";
 
 const { profile, featured, experiments, research, skills } = data;
+const web3formsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 const orbitPositions = [
   "orbit-card--one",
   "orbit-card--two",
@@ -27,7 +28,7 @@ const orbitPositions = [
       <span class="dot-grid" aria-hidden="true">M</span>
       <span>MAHATAV / ARORA</span>
     </a>
-    <a class="contact-button" href={`mailto:${profile.email}`} aria-label="Email Mahatav">
+    <a class="contact-button" href="#contact-form" aria-label="Open contact form">
       <span>LET'S TALK</span>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
@@ -109,7 +110,7 @@ const orbitPositions = [
         </div>
         <div class="console-actions">
           <a href="#work">ENTER THE WORK <span>↓</span></a>
-          <a href="/Mahatav_Arora_Resume.pdf" target="_blank">RESUME <span>↗</span></a>
+          <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">RESUME <span>↗</span></a>
         </div>
       </div>
 
@@ -240,13 +241,38 @@ const orbitPositions = [
       <span class="contact-orbit" aria-hidden="true"></span>
       <span class="section-number">05 / CONTACT</span>
       <p>Have an unruly website, an applied AI idea, or a system that needs a clearer shape?</p>
-      <a class="contact-link" href={`mailto:${profile.email}`}>Let’s make it useful.<span>↗</span></a>
+      <a class="contact-link" href="#contact-form">Let’s make it useful.<span>↗</span></a>
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input type="hidden" name="access_key" value={web3formsAccessKey} />
+        <input type="hidden" name="subject" value="New portfolio contact request" />
+        <input type="hidden" name="from_name" value="Mahatav Portfolio" />
+        <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label class="contact-form__full">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Tell me what you're building." required></textarea>
+        </label>
+        <button type="submit">Send Message <span>↗</span></button>
+      </form>
       <div class="contact-footer">
         <span>{profile.name} · {profile.location}</span>
         <div>
           <a href={profile.github} target="_blank">GitHub ↗</a>
           <a href={profile.linkedin} target="_blank">LinkedIn ↗</a>
-          <a href="/Mahatav_Arora_Resume.pdf" target="_blank">Resume ↗</a>
+          <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">Resume ↗</a>
         </div>
         <span>© {new Date().getFullYear()}</span>
       </div>
