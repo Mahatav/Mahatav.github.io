@@ -348,14 +348,21 @@ const orbitPositions = [
       });
     });
 
-    const closeDialog = () => {
-      dialog?.close();
+    const unlockPageScroll = () => {
       document.body.classList.remove("dialog-open");
     };
+
+    const closeDialog = () => {
+      if (dialog?.open) dialog.close();
+      unlockPageScroll();
+    };
+
     closeButton?.addEventListener("click", closeDialog);
     dialog?.addEventListener("click", (event) => {
       if (event.target === dialog) closeDialog();
     });
+    dialog?.addEventListener("cancel", unlockPageScroll);
+    dialog?.addEventListener("close", unlockPageScroll);
 
     document.querySelectorAll<HTMLButtonElement>(".filter-button").forEach((button) => {
       button.addEventListener("click", () => {
