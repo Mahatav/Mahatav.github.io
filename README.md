@@ -4,15 +4,23 @@ An editorial, spatial portfolio built with Astro, with a small Django JSON API t
 
 ## Deploy to GitHub Pages
 
-1. Push this repo to GitHub and keep your default branch as `main`.
-2. In GitHub, open Settings -> Pages, then set Source to `GitHub Actions`.
-3. In GitHub, open Settings -> Secrets and variables -> Actions and add:
-	- `PUBLIC_WEB3FORMS_ACCESS_KEY` = your Web3Forms access key.
-4. Commit and push these changes. The workflow at `.github/workflows/deploy.yml` will build and deploy automatically.
+This project is configured for the root user site:
 
-Astro base-path handling is automatic for project Pages URLs (for example `/repo-name`).
+`https://mahatav.github.io`
 
-If you attach a custom domain and want root deployment, set `DEPLOY_BASE=/` in your build environment.
+To publish at that exact URL:
+
+1. Rename the GitHub repository from `Portfolio` to `Mahatav.github.io`.
+2. Keep the default deployment branch as `master`.
+3. Open repository Settings -> Pages and set Source to `GitHub Actions`.
+4. In Settings -> Secrets and variables -> Actions, add:
+   - `PUBLIC_WEB3FORMS_ACCESS_KEY` = your Web3Forms access key.
+5. Push to `master`. `.github/workflows/deploy.yml` will build and publish automatically.
+
+The Astro `site` is set to `https://mahatav.github.io` and intentionally has no
+repository `base`, because GitHub serves specially named user-site repositories
+from `/`. The workflow also checks the repository name, preventing an accidental
+broken deployment from the old `Portfolio` repository path.
 
 ## Frontend
 
