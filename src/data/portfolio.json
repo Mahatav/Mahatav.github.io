@@ -23,6 +23,7 @@
       "description": "A custom interactive archive for videos, documents, audio, and written lore. The experience uses command parsing, autocomplete, access levels, animated output, hidden commands, and file-opening workflows.",
       "stack": ["HTML", "CSS", "JavaScript", "WebGL", "Rive", "Docker", "Nginx"],
       "highlights": ["Terminal command system", "3D and motion assets", "Dockerized deployment"],
+      "githubUrl": "https://github.com/Mahatav/alien-website",
       "type": "Client system"
     },
     {
@@ -49,6 +50,7 @@
       "description": "Redesigned and maintained the Green Construction Research & Training Center site, added custom page indexing and search, repaired the contact workflow, and maintained the Wilden Living Lab site.",
       "stack": ["Astro", "JavaScript", "PHP", "Content systems", "Search"],
       "highlights": ["Custom site search", "Research publishing", "Contact integration"],
+      "githubUrl": "https://github.com/Mahatav/GCRTC-Website",
       "type": "Research website"
     },
     {
@@ -62,6 +64,7 @@
       "description": "Implemented embeddings, causal multi-head attention, transformer blocks, MLPs, weight tying, AdamW, BPE and character tokenization, checkpointing, evaluation, and top-k/top-p generation.",
       "stack": ["Python", "PyTorch", "NumPy", "Transformers", "BPE"],
       "highlights": ["100+ tests", "Custom training loop", "Sampling utilities"],
+      "githubUrl": "https://github.com/Mahatav/GPT-2_Scratch",
       "type": "ML engineering"
     },
     {
@@ -118,14 +121,20 @@
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
       "summary": "Trained parallel GPT-2-style models across Eastern and Western philosophical corpora, then measured divergence across 284 prompts and 14 categories.",
-      "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"]
+      "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"],
+      "paperTitle": "Corpus-Conditioned Bias: Training GPT-2 Models on Eastern and Western Philosophical Texts",
+      "paperPath": "research/Corpus_Conditioned_Bias.pdf",
+      "status": "Research paper"
     },
     {
       "title": "Human vs. AI Code Analytics",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
       "summary": "Fine-tuned CodeBERT classifiers and built repository scanners that estimate whether capstone source files are human-written, AI-generated, or uncertain.",
-      "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"]
+      "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"],
+      "paperTitle": "Pre-Post AI Comparisons: Behavioural Changes in Student Capstone Projects",
+      "paperPath": "research/Pre_Post_AI_Comparisons.pdf",
+      "status": "Research paper"
     },
     {
       "title": "Software Process Analysis",
@@ -133,6 +142,16 @@
       "code": "COSC 447",
       "summary": "Built a GitHub analytics pipeline for pull requests, commits, reviews, branches, communication patterns, and process-model visualizations.",
       "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
+    },
+    {
+      "title": "Jersey Number Recognition",
+      "period": "2026",
+      "code": "COMPUTER VISION",
+      "summary": "Built and evaluated a multi-stage SoccerNet pipeline using NAFNet restoration, YOLOv8 pose crops, PARSeq, vision-language models, and confidence-weighted tracklet aggregation.",
+      "tags": ["SoccerNet", "YOLOv8 Pose", "PARSeq", "Vision-language models"],
+      "paperTitle": "Jersey Number Recognition in Broadcast Soccer Video",
+      "paperPath": "research/Jersey_Number_Recognition.pdf",
+      "status": "Under review"
     }
   ],
   "skills": {

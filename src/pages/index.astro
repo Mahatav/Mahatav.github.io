@@ -203,8 +203,21 @@ const orbitPositions = [
                 <span>{item.period}</span>
               </div>
               <span class="research-code">{item.code}</span>
+              {"status" in item && <span class:list={["research-status", { "is-review": item.status === "Under review" }]}>{item.status}</span>}
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
+              {"paperPath" in item && (
+                <a
+                  class="research-paper-link"
+                  href={`${import.meta.env.BASE_URL}${item.paperPath}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Read ${item.paperTitle}`}
+                >
+                  <span>READ PAPER</span>
+                  <i>PDF ↗</i>
+                </a>
+              )}
               <div class="research-tags">{item.tags.map((tag) => <span>{tag}</span>)}</div>
             </article>
           ))
@@ -297,6 +310,7 @@ const orbitPositions = [
       description: string;
       highlights: string[];
       stack: string[];
+      githubUrl?: string;
     }
 
     const dataNode = document.querySelector<HTMLScriptElement>("#portfolio-data");
@@ -340,6 +354,14 @@ const orbitPositions = [
             <div class="dialog-highlights">
               ${project.highlights.map((item, index) => `<span><i>0${index + 1}</i>${item}</span>`).join("")}
             </div>
+            ${project.githubUrl ? `
+              <div class="dialog-actions">
+                <a href="${project.githubUrl}" target="_blank" rel="noreferrer">
+                  <span>VIEW SOURCE</span>
+                  <i>GITHUB ↗</i>
+                </a>
+              </div>
+            ` : ""}
             <div class="dialog-stack">${project.stack.map((item) => `<span>${item}</span>`).join("")}</div>
           </div>
         `;
