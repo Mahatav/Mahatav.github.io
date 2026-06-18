@@ -1,0 +1,144 @@
+{
+  "profile": {
+    "name": "Mahatav Arora",
+    "shortName": "MA",
+    "role": "Full-stack developer · AI/ML researcher",
+    "intro": "I build expressive web systems, practical AI tools, and research pipelines that turn complicated material into something people can actually use.",
+    "location": "Kelowna, BC",
+    "email": "mahatavarora@gmail.com",
+    "phone": "250-681-6810",
+    "github": "https://github.com/Mahatav",
+    "linkedin": "https://linkedin.com/in/mahatav-arora",
+    "availability": "Available for select web and applied AI projects"
+  },
+  "featured": [
+    {
+      "id": "skinny-bob",
+      "title": "Channeling Skinny Bob",
+      "eyebrow": "Contract website · 2026",
+      "category": "web",
+      "mark": "SB",
+      "accent": "#ff7256",
+      "summary": "An alien archive disguised as a retro terminal, built for a YouTube creator and their community.",
+      "description": "A custom interactive archive for videos, documents, audio, and written lore. The experience uses command parsing, autocomplete, access levels, animated output, hidden commands, and file-opening workflows.",
+      "stack": ["HTML", "CSS", "JavaScript", "WebGL", "Rive", "Docker", "Nginx"],
+      "highlights": ["Terminal command system", "3D and motion assets", "Dockerized deployment"],
+      "type": "Client system"
+    },
+    {
+      "id": "okgn",
+      "title": "OKGN Boat Rentals",
+      "eyebrow": "Two summer contracts · 2025–26",
+      "category": "web",
+      "mark": "OK",
+      "accent": "#d6ff61",
+      "summary": "A faster, clearer rental website and multi-step booking flow built for peak-season traffic.",
+      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, passenger details, validation, spam protection, rate limiting, and PHP email delivery.",
+      "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
+      "highlights": ["Multi-step booking", "Local search improvements", "Responsive rebuild"],
+      "type": "Client platform"
+    },
+    {
+      "id": "gcrtc",
+      "title": "Green Construction",
+      "eyebrow": "UBC research centre · 2025–26",
+      "category": "web",
+      "mark": "GC",
+      "accent": "#a9e5d6",
+      "summary": "A multi-page publishing system for sustainable construction research, events, people, and funding.",
+      "description": "Redesigned and maintained the Green Construction Research & Training Center site, added custom page indexing and search, repaired the contact workflow, and maintained the Wilden Living Lab site.",
+      "stack": ["Astro", "JavaScript", "PHP", "Content systems", "Search"],
+      "highlights": ["Custom site search", "Research publishing", "Contact integration"],
+      "type": "Research website"
+    },
+    {
+      "id": "gpt2",
+      "title": "GPT-2, From Scratch",
+      "eyebrow": "Independent build · 2026",
+      "category": "ai",
+      "mark": "G2",
+      "accent": "#ffd6a3",
+      "summary": "A tested GPT-2-style language model implementation, from tokenizer to generation loop.",
+      "description": "Implemented embeddings, causal multi-head attention, transformer blocks, MLPs, weight tying, AdamW, BPE and character tokenization, checkpointing, evaluation, and top-k/top-p generation.",
+      "stack": ["Python", "PyTorch", "NumPy", "Transformers", "BPE"],
+      "highlights": ["100+ tests", "Custom training loop", "Sampling utilities"],
+      "type": "ML engineering"
+    },
+    {
+      "id": "ta-system",
+      "title": "TA Application System",
+      "eyebrow": "Capstone · 2025",
+      "category": "systems",
+      "mark": "TA",
+      "accent": "#c8b8ff",
+      "summary": "A Django hiring workflow with AI resume extraction and coordinator-grade filtering.",
+      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application, surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
+      "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
+      "highlights": ["PDF skill extraction", "Advanced applicant filters", "Multi-container stack"],
+      "type": "Full-stack system"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "drone-tracking",
+      "title": "Autonomous Drone Person Tracking",
+      "year": "2024",
+      "category": "vision",
+      "summary": "Real-time YOLOv8 person detection mapped to a 3×3 autonomous flight-control grid.",
+      "stack": ["Python", "YOLOv8", "OpenCV", "djitellopy"]
+    },
+    {
+      "id": "spider-bot",
+      "title": "Computer Vision Spider Bot",
+      "year": "2024",
+      "category": "vision",
+      "summary": "YOLOv7 and BYTETracker target following connected to ESP32 movement control.",
+      "stack": ["PyTorch", "OpenCV", "ESP32-CAM", "Arduino"]
+    },
+    {
+      "id": "landing-pad",
+      "title": "Autonomous Landing Pad Detection",
+      "year": "2023",
+      "category": "vision",
+      "summary": "A UAV landing prototype using HSV masks, moments, Hough circles, OCR, and DroneKit logic.",
+      "stack": ["Python", "OpenCV", "DroneKit", "Tesseract"]
+    },
+    {
+      "id": "ekyc",
+      "title": "Banking eKYC Prototypes",
+      "year": "2024",
+      "category": "ai",
+      "summary": "Face capture, labelling, detection, landmarks, and head-pose workflows for identity research.",
+      "stack": ["YOLOv8", "dlib", "OpenCV", "Python"]
+    }
+  ],
+  "research": [
+    {
+      "title": "Corpus-Conditioned LLM Pre-Training",
+      "period": "Jan–Apr 2026",
+      "code": "DATA 448",
+      "summary": "Trained parallel GPT-2-style models across Eastern and Western philosophical corpora, then measured divergence across 284 prompts and 14 categories.",
+      "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"]
+    },
+    {
+      "title": "Human vs. AI Code Analytics",
+      "period": "Jan–Apr 2026",
+      "code": "DATA 448",
+      "summary": "Fine-tuned CodeBERT classifiers and built repository scanners that estimate whether capstone source files are human-written, AI-generated, or uncertain.",
+      "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"]
+    },
+    {
+      "title": "Software Process Analysis",
+      "period": "Sep 2025–Apr 2026",
+      "code": "COSC 447",
+      "summary": "Built a GitHub analytics pipeline for pull requests, commits, reviews, branches, communication patterns, and process-model visualizations.",
+      "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "JavaScript", "Java", "C/C++", "HTML", "CSS", "R", "Assembly"],
+    "platforms": ["Astro", "Django", "FastAPI", "Docker", "Nginx", "Ollama", "WordPress"],
+    "data": ["PyTorch", "Pandas", "NumPy", "OpenCV", "Transformers", "NetworkX"],
+    "tools": ["Git", "GitHub API", "CUDA", "MySQL", "VS Code", "PyCharm"]
+  }
+}
