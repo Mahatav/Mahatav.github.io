@@ -64,7 +64,7 @@ const personSchema = {
       // Clickjacking mitigation: break out if framed by another site.
       // GitHub Pages can't send X-Frame-Options, so this runs client-side.
       try {
-        if (window.top !== window.self) {
+        if (window.top && window.top !== window.self) {
           window.top.location = window.self.location.href;
         }
       } catch (e) {
