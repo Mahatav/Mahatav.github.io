@@ -17,14 +17,14 @@ const orbitPositions = [
     <strong>{profile.location}</strong>
   </div>
   <div class="hero-meta hero-meta--right">
-    <span>FIELD NOTES</span>
-    <strong>2023—2026</strong>
+    <span>AVAILABILITY</span>
+    <strong>OPEN FOR PROJECTS</strong>
   </div>
 
   <div class="hero-copy">
     <h1 id="hero-title">
-      Serious builds for<br />
-      <em>brands that ship.</em>
+      Tech that works<br />
+      <em>for your business.</em>
     </h1>
   </div>
 
@@ -35,12 +35,14 @@ const orbitPositions = [
       <span class="signal-disc__label">MA</span>
       <div class="scanline"></div>
     </div>
-    <div class="satellite satellite--a">WEB</div>
-    <div class="satellite satellite--b">AI</div>
-    <div class="satellite satellite--c">DATA</div>
-    <div class="satellite satellite--d satellite--area">SYSTEMS</div>
-    <div class="satellite satellite--e satellite--area">APPLICATIONS</div>
-    <div class="satellite satellite--f satellite--area">RESEARCH</div>
+    <div class="electron-field" aria-hidden="true">
+      <div class="orbit orbit--outer" style="--d:0s"><span class="satellite"><b>WEB</b></span></div>
+      <div class="orbit orbit--outer" style="--d:-8.67s"><span class="satellite satellite--acid"><b>AI</b></span></div>
+      <div class="orbit orbit--outer" style="--d:-17.33s"><span class="satellite satellite--orange"><b>DATA</b></span></div>
+      <div class="orbit orbit--inner" style="--d:0s"><span class="satellite satellite--mint satellite--area"><b>SYSTEMS</b></span></div>
+      <div class="orbit orbit--inner" style="--d:-6.33s"><span class="satellite satellite--lilac satellite--area"><b>APPLICATIONS</b></span></div>
+      <div class="orbit orbit--inner" style="--d:-12.67s"><span class="satellite satellite--peach satellite--area"><b>RESEARCH</b></span></div>
+    </div>
   </div>
 
   <div class="orbit-field" aria-label="Featured project shortcuts">
@@ -85,14 +87,14 @@ const orbitPositions = [
     </div>
     <div class="console-body">
       <div>
-        <span class="console-label">CURRENT MODE</span>
-        <strong>FULL-STACK + APPLIED AI</strong>
+        <span class="console-label">STATUS</span>
+        <strong>TAKING ON NEW WORK</strong>
       </div>
       <p>{profile.availability}</p>
     </div>
     <div class="console-actions">
-      <a href="#work">ENTER THE WORK <span>↓</span></a>
-      <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">RESUME <span>↗</span></a>
+      <a href="#contact-form">START A PROJECT <span>↗</span></a>
+      <a href="#packages">SEE HOW WE'D WORK <span>↓</span></a>
     </div>
   </div>
 

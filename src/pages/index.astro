@@ -6,6 +6,7 @@ import Hero from "../components/Hero.astro";
 import SelectedWork from "../components/SelectedWork.astro";
 import BuildLab from "../components/BuildLab.astro";
 import ResearchLog from "../components/ResearchLog.astro";
+import Packages from "../components/Packages.astro";
 import OperatingNotes from "../components/OperatingNotes.astro";
 import Faq from "../components/Faq.astro";
 import Contact from "../components/Contact.astro";
@@ -15,8 +16,8 @@ const { profile, featured } = data;
 ---
 
 <BaseLayout
-  title={`${profile.name} — Freelance Web & AI Developer`}
-  description="Mahatav Arora is a freelance developer who builds standout websites and dependable AI systems—from first brief to production launch. Available for hire."
+  title={`${profile.name} · Custom Websites for Businesses`}
+  description="Mahatav Arora builds custom websites and online tools that help businesses look professional, get found on Google, and win more customers. Available for new projects."
 >
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-orb" aria-hidden="true"></div>
@@ -26,6 +27,7 @@ const { profile, featured } = data;
   <main id="top">
     <Hero />
     <SelectedWork />
+    <Packages />
     <BuildLab />
     <ResearchLog />
     <OperatingNotes />
@@ -52,6 +54,9 @@ const { profile, featured } = data;
       proof?: string[];
       showcaseVideo?: string;
       showcasePoster?: string;
+      reelLabel?: string;
+      image?: string;
+      imageCaption?: string;
       websiteUrl?: string;
       githubUrl?: string;
     }
@@ -85,7 +90,7 @@ const { profile, featured } = data;
         if (!project || !dialog || !dialogContent) return;
         dialogContent.style.setProperty("--accent", project.accent);
         dialogContent.innerHTML = `
-          <div class="dialog-visual ${project.showcaseVideo ? "dialog-visual--showcase" : ""}" style="--accent:${project.accent}">
+          <div class="dialog-visual ${project.showcaseVideo || project.image ? "dialog-visual--showcase" : ""}" style="--accent:${project.accent}">
             ${project.showcaseVideo ? `
               <img
                 class="dialog-showcase-backdrop"
@@ -103,7 +108,10 @@ const { profile, featured } = data;
                 playsinline
                 preload="auto"
               ></video>
-              <span class="dialog-reel-kicker">LIVE BUILD / MAIN SITE → ARCHIVE</span>
+              <span class="dialog-reel-kicker">${project.reelLabel ?? "LIVE BUILD / MAIN SITE → ARCHIVE"}</span>
+            ` : project.image ? `
+              <img class="dialog-image" src="${project.image}" alt="${project.title} · ${project.imageCaption ?? "screenshot"}" />
+              ${project.imageCaption ? `<span class="dialog-reel-kicker">${project.imageCaption}</span>` : ""}
             ` : `
               <span class="dialog-mark">${project.mark}</span>
               <i></i><i></i><i></i>
@@ -206,7 +214,7 @@ const { profile, featured } = data;
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll(".project-card, .experiment-row, .research-card, .about-grid, .faq-list").forEach((element) => {
+    document.querySelectorAll(".project-card, .experiment-row, .research-card, .package-card, .about-grid, .faq-list").forEach((element) => {
       revealObserver.observe(element);
     });
   </script>

@@ -1,0 +1,53 @@
+---
+import data from "../data/portfolio.json";
+
+const { packages } = data;
+const { tiers, seo } = packages;
+---
+
+<section class="section packages-section" id="packages">
+  <div class="section-heading">
+    <div>
+      <span class="section-number">02 / ENGAGEMENTS</span>
+      <h2>Ways to<br /><em>work together.</em></h2>
+    </div>
+    <p>{packages.intro}</p>
+  </div>
+
+  <div class="packages-grid">
+    {
+      tiers.map((tier, index) => (
+        <article class={`package-card${tier.featured ? " package-card--featured" : ""}`}>
+          <div class="package-card__top">
+            <span class="package-index">{String(index + 1).padStart(2, "0")}</span>
+            {tier.featured && <span class="package-tag">MOST POPULAR</span>}
+          </div>
+          <h3>{tier.name}</h3>
+          <span class="package-scope">{tier.scope}</span>
+          <p class="package-blurb">{tier.blurb}</p>
+          <ul class="package-features">
+            {tier.features.map((feature) => (
+              <li><i aria-hidden="true">→</i>{feature}</li>
+            ))}
+          </ul>
+          <div class="package-foot">
+            <span class="package-price">{tier.price}</span>
+            <a class="package-cta" href="#contact-form">Get a quote <span>↗</span></a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="seo-band">
+    <div class="seo-band__head">
+      <span class="card-label">{seo.label}</span>
+      <p>{seo.summary}</p>
+    </div>
+    <ul class="seo-band__list">
+      {seo.items.map((item) => (
+        <li><i aria-hidden="true">✶</i>{item}</li>
+      ))}
+    </ul>
+  </div>
+</section>

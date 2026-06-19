@@ -2,158 +2,165 @@
   "profile": {
     "name": "Mahatav Arora",
     "shortName": "MA",
-    "role": "Full-stack developer · AI/ML researcher",
-    "intro": "I'm a freelance developer you can count on to build standout websites and dependable AI systems—and to ship them. I take projects from first brief to production launch, and I sweat the details so the result works for the people who use it.",
+    "role": "Custom websites & online tools for businesses",
+    "intro": "I build websites and online tools that help your business look professional, get found on Google, and turn visitors into customers. I handle the whole thing, from our first chat to launch, and explain every step in plain English, no tech-speak required.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
     "instagram": "https://www.instagram.com/mahatav.arora/",
-    "availability": "Available for freelance web and AI builds—dependable from first brief to launch"
+    "availability": "Taking on new website projects, from first chat to launch, no jargon."
   },
   "featured": [
     {
       "id": "skinny-bob",
       "title": "Channeling Skinny Bob",
-      "eyebrow": "End-to-end freelance build · 2026",
+      "eyebrow": "Full project, start to finish · 2026",
       "category": "web",
       "mark": "SB",
       "accent": "#ff7256",
-      "summary": "A cinematic content platform that turns a creator’s niche archive into a world their audience can explore.",
-      "description": "I took this project from a loose creative brief to a production launch. That meant shaping the visual direction, building the responsive Astro experience, and organizing a large research library. I also engineered a secret command-line archive and handled the private evidence-upload API and deployment. It is the kind of freelance work I love: distinctive on the surface, carefully engineered underneath, and built around what the client’s audience should feel and do.",
+      "summary": "A bold, cinematic website that turns a creator's archive into an experience their fans can explore.",
+      "description": "I shaped the whole look and feel, built the entire website, and organized a large library of content, then added a few hidden surprises for fans to discover. Taken from a first idea all the way to launch.",
       "stack": ["Astro", "CSS", "JavaScript", "Canvas", "Rive", "Node.js", "Docker", "Nginx"],
-      "highlights": ["Creative direction through production", "21 public dossiers + 55-file hidden archive", "Secure evidence intake and deployment"],
-      "services": ["Creative direction", "UX and interaction design", "Full-stack development", "Production deployment"],
-      "proof": ["21 public case dossiers", "55-file command-line archive", "Private 20 MB evidence uploads"],
+      "highlights": ["Look and feel built from scratch", "21 public stories + a hidden archive", "Secure private file uploads"],
+      "services": ["Look and feel", "Easy-to-use design", "Full website build", "Launch and hosting"],
       "showcaseVideo": "/media/channeling-skinny-bob-showcase.mp4",
       "showcasePoster": "/media/channeling-skinny-bob-poster.jpg",
       "websiteUrl": "https://channelingskinnybob.com/",
-      "type": "Client platform"
+      "type": "Client website"
     },
     {
       "id": "ta-system",
       "title": "TA Application System",
-      "eyebrow": "Capstone · 2025",
+      "eyebrow": "University project · 2025",
       "category": "systems",
       "mark": "TA",
       "accent": "#c8b8ff",
-      "summary": "A Django hiring workflow with AI resume extraction and coordinator-grade filtering.",
-      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application. From there I surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
+      "summary": "A hiring tool that reads résumés automatically and helps the team find the right candidates fast.",
+      "description": "I built a system that scans applicants' résumés, pulls out their real skills, and lets the hiring team filter and sort candidates in seconds instead of hours, turning a slow, manual job into a few clicks.",
       "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
-      "highlights": ["PDF skill extraction", "Advanced applicant filters", "Multi-container stack"],
+      "highlights": ["Reads skills straight from résumés", "Powerful candidate filters", "Built to handle big volumes"],
       "githubUrl": "https://github.com/UBCO-COSC499-S2025/team-11-capstone-team-11",
-      "type": "Full-stack system"
+      "type": "Custom web tool"
     },
     {
       "id": "gcrtc",
       "title": "Green Construction",
-      "eyebrow": "UBC research centre · 2025–26",
+      "eyebrow": "University research centre · 2025–26",
       "category": "web",
       "mark": "GC",
       "accent": "#a9e5d6",
-      "summary": "A multi-page publishing system for sustainable construction research, events, people, and funding.",
-      "description": "Redesigned and maintained the Green Construction Research & Training Center site. I added custom page indexing and search, repaired the contact workflow, and maintained the Wilden Living Lab site.",
-      "stack": ["Astro", "JavaScript", "PHP", "Content systems", "Search"],
-      "highlights": ["Custom site search", "Research publishing", "Contact integration"],
-      "githubUrl": "https://github.com/Mahatav/GCRTC-Website",
+      "summary": "A full website rebuild for a university research centre, easy to update and easy to search.",
+      "description": "I redesigned and rebuilt the centre's website so their staff can publish research, events, and team updates themselves, without needing a developer. I also added a custom search and fixed their contact forms.",
+      "stack": ["WordPress", "PHP", "JavaScript", "Custom search", "SEO"],
+      "highlights": ["Custom site search", "Staff can post their own updates", "Contact forms that actually work"],
+      "showcaseVideo": "/media/gcrtc-showcase.mp4",
+      "showcasePoster": "/media/gcrtc-poster.jpg",
+      "reelLabel": "GCRTC.UBC.CA → FULL REVAMP",
+      "websiteUrl": "https://gcrtc.ubc.ca/",
       "type": "Research website"
     },
     {
       "id": "gpt2",
-      "title": "GPT-2, From Scratch",
-      "eyebrow": "Independent build · 2026",
+      "title": "AI Built From Scratch",
+      "eyebrow": "Personal project · 2026",
       "category": "ai",
       "mark": "G2",
       "accent": "#ffd6a3",
-      "summary": "A tested GPT-2-style language model implementation, from tokenizer to generation loop.",
-      "description": "Implemented embeddings, causal multi-head attention, transformer blocks, MLPs, and weight tying. The training and inference side covers AdamW, BPE and character tokenization, checkpointing, evaluation, and top-k/top-p generation.",
+      "summary": "I built my own version of the kind of AI that powers tools like ChatGPT, from the ground up.",
+      "description": "A from-scratch build of a language model, the technology behind today's AI chat tools. I wrote and tested every piece myself to truly understand how it works, so I can put AI to practical use in real projects.",
       "stack": ["Python", "PyTorch", "NumPy", "Transformers", "BPE"],
-      "highlights": ["100+ tests", "Custom training loop", "Sampling utilities"],
+      "highlights": ["Built and trained from scratch", "Over 100 tests", "Writes its own text"],
       "githubUrl": "https://github.com/Mahatav/GPT-2_Scratch",
-      "type": "ML engineering"
+      "image": "/media/gpt2-training.jpg",
+      "imageCaption": "LIVE TRAINING RUN",
+      "type": "AI build"
     },
     {
       "id": "okgn",
       "title": "OKGN Boat Rentals",
-      "eyebrow": "Two summer contracts · 2025–26",
+      "eyebrow": "Two summers of work · 2025–26",
       "category": "web",
       "mark": "OK",
       "accent": "#d6ff61",
-      "summary": "A faster, clearer rental website and multi-step booking flow built for peak-season traffic.",
-      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, and passenger details. It also covers validation, spam protection, rate limiting, and PHP email delivery.",
+      "summary": "A faster, clearer boat-rental website with easy online booking, built for the busy season.",
+      "description": "I rebuilt the whole website and added a simple step-by-step booking system: pick a date and time, choose a boat, add your details, done. Built to handle the summer rush, get found locally, and keep spam out.",
       "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
-      "highlights": ["Multi-step booking", "Local search improvements", "Responsive rebuild"],
+      "highlights": ["Easy online booking", "Easier to find on Google", "Works great on phones"],
+      "showcaseVideo": "/media/okgn-showcase.mp4",
+      "showcasePoster": "/media/okgn-poster.jpg",
+      "reelLabel": "LIVE SITE → BOOKING FLOW",
       "websiteUrl": "https://okgnboatrentals.ca/",
-      "type": "Client platform"
+      "type": "Client website"
     }
   ],
   "experiments": [
     {
       "id": "drone-tracking",
-      "title": "Autonomous Drone Person Tracking",
+      "title": "Self-Flying Drone That Follows People",
       "year": "2024",
       "category": "vision",
-      "summary": "Real-time YOLOv8 person detection mapped to a 3×3 autonomous flight-control grid.",
+      "summary": "A drone that spots a person and flies itself to follow them, on its own, in real time.",
       "stack": ["Python", "YOLOv8", "OpenCV", "djitellopy"]
     },
     {
       "id": "spider-bot",
-      "title": "Computer Vision Spider Bot",
+      "title": "Camera Robot That Chases a Target",
       "year": "2024",
       "category": "vision",
-      "summary": "YOLOv7 and BYTETracker target following connected to ESP32 movement control.",
+      "summary": "A little robot with a camera that locks onto a target and chases it around the room.",
       "stack": ["PyTorch", "OpenCV", "ESP32-CAM", "Arduino"]
     },
     {
       "id": "landing-pad",
-      "title": "Autonomous Landing Pad Detection",
+      "title": "Drone That Lands Itself",
       "year": "2023",
       "category": "vision",
-      "summary": "A UAV landing prototype that combines HSV masks, moments, Hough circles, and OCR. DroneKit logic ties the detections to flight control.",
+      "summary": "A drone that finds its own landing pad and touches down by itself, no pilot needed.",
       "stack": ["Python", "OpenCV", "DroneKit", "Tesseract"]
     },
     {
       "id": "ekyc",
-      "title": "Banking eKYC Prototypes",
+      "title": "Banking Identity Checks",
       "year": "2024",
       "category": "ai",
-      "summary": "Identity-research workflows for face capture, labelling, and detection. They also cover facial landmarks and head-pose estimation.",
+      "summary": "Experiments in identity verification, spotting faces and confirming they're really there, the way banking apps do.",
       "stack": ["YOLOv8", "dlib", "OpenCV", "Python"]
     }
   ],
   "research": [
     {
-      "title": "Corpus-Conditioned LLM Pre-Training",
+      "title": "How AI Picks Up Bias",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Trained parallel GPT-2-style models on Eastern and Western philosophical corpora. I then measured how their outputs diverged across 284 prompts and 14 categories.",
+      "summary": "Studied how AI takes on bias depending on what it's trained on, by training two models on very different philosophy texts and comparing how they 'think.'",
       "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"],
       "paperTitle": "Corpus-Conditioned Bias: Training GPT-2 Models on Eastern and Western Philosophical Texts",
       "paperPath": "research/Corpus_Conditioned_Bias.pdf",
       "status": "Research paper"
     },
     {
-      "title": "Human vs. AI Code Analytics",
+      "title": "Spotting Human vs. AI Code",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Fine-tuned CodeBERT classifiers and built repository scanners for capstone projects. Each scanner estimates whether a source file is human-written, AI-generated, or uncertain.",
+      "summary": "Built a tool that can tell whether computer code was written by a person or by AI, and used it to study how students' work is changing.",
       "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"],
       "paperTitle": "Pre-Post AI Comparisons: Behavioural Changes in Student Capstone Projects",
       "paperPath": "research/Pre_Post_AI_Comparisons.pdf",
       "status": "Research paper"
     },
     {
-      "title": "Software Process Analysis",
+      "title": "How Software Teams Work",
       "period": "Sep 2025–Apr 2026",
       "code": "COSC 447",
-      "summary": "Built a GitHub analytics pipeline covering pull requests, commits, reviews, and branches. It also surfaces communication patterns and process-model visualizations.",
+      "summary": "Built a tool that analyzes how software teams actually work together, turning their day-to-day activity into clear, visual patterns.",
       "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
     },
     {
-      "title": "Jersey Number Recognition",
+      "title": "Reading Jersey Numbers on TV",
       "period": "2026",
       "code": "COMPUTER VISION",
-      "summary": "Built and evaluated a multi-stage SoccerNet pipeline for reading jersey numbers. The stages combine NAFNet restoration, YOLOv8 pose crops, PARSeq, vision-language models, and confidence-weighted tracklet aggregation.",
+      "summary": "Built a system that reads players' jersey numbers from broadcast soccer footage, even when the video is blurry or far away.",
       "tags": ["SoccerNet", "YOLOv8 Pose", "PARSeq", "Vision-language models"],
       "paperTitle": "Jersey Number Recognition in Broadcast Soccer Video",
       "paperPath": "research/Jersey_Number_Recognition.pdf",
@@ -162,26 +169,85 @@
   ],
   "skills": {
     "languages": ["Python", "JavaScript", "Java", "C/C++", "HTML", "CSS", "R", "Assembly"],
-    "platforms": ["Astro", "Django", "FastAPI", "Docker", "Nginx", "Ollama", "WordPress"],
+    "platforms": ["WordPress", "Squarespace", "Astro", "Django", "FastAPI", "Docker"],
     "data": ["PyTorch", "Pandas", "NumPy", "OpenCV", "Transformers", "NetworkX"],
-    "tools": ["Git", "GitHub API", "CUDA", "MySQL", "VS Code", "PyCharm"]
+    "tools": ["Git", "Google Analytics", "Search Console", "MySQL", "SEO", "Figma"]
+  },
+  "packages": {
+    "intro": "Simple, clear options based on what your business actually needs. Every website is built to be found on Google and ready to grow with you. I'll give you a price after a quick, no-pressure chat about your project.",
+    "tiers": [
+      {
+        "name": "Starter",
+        "scope": "Website builder",
+        "blurb": "A clean, tidy site built on a website builder you can choose, Squarespace, WordPress, Wix, or similar. No custom design, just a fast and professional way to get your business online.",
+        "price": "Custom quote",
+        "features": [
+          "Set up on any website builder",
+          "Styled to match your brand",
+          "Looks great on phones and tablets",
+          "Set up to show on Google",
+          "Contact form, then it's yours"
+        ]
+      },
+      {
+        "name": "Professional",
+        "scope": "Custom-designed site",
+        "blurb": "A one-of-a-kind website designed around your brand and built to turn visitors into customers. No templates, made just for you.",
+        "price": "Custom quote",
+        "featured": true,
+        "features": [
+          "A custom design, made just for you",
+          "Looks perfect on every screen",
+          "Easy to update yourself, no code",
+          "Built to load fast and rank on Google",
+          "See how visitors find and use your site",
+          "Online booking or contact forms"
+        ]
+      },
+      {
+        "name": "Performance",
+        "scope": "Custom visuals + features",
+        "blurb": "Eye-catching custom visuals, animation, and interactive features, plus smart tools and automation when your business needs them. For brands that want to truly stand out.",
+        "price": "Custom quote",
+        "features": [
+          "Everything in Professional",
+          "Custom graphics and illustrations",
+          "Animation and interactive features",
+          "Custom tools built around your business",
+          "Smart, AI-powered features",
+          "Ongoing support as you grow"
+        ]
+      }
+    ],
+    "seo": {
+      "label": "GETTING FOUND ON GOOGLE",
+      "summary": "Showing up on Google is built into everything I make, and I can also improve it on its own, whether I built your site or not.",
+      "items": [
+        "Find and fix what's hurting your ranking",
+        "Make your site load faster",
+        "Help you stand out in Google results",
+        "Optimize your pages for search",
+        "Show up in local searches and maps",
+        "Clear reports on how you're doing"
+      ]
+    }
   },
   "faq": [
     {
-      "question": "What kind of projects do you take on?",
-      "answer": "Standout websites, full-stack systems, and practical AI/ML tools—from creative client builds to production research pipelines. If it lives on the web or runs a model, I can build and ship it."
+      "question": "What kind of work do you take on?",
+      "answer": "Websites and online tools for businesses, from a simple, polished site to a custom build with online booking, customer logins, or smart automation. If it lives online, I can build it."
+    },
+    {
+      "question": "Do I need to understand the tech?",
+      "answer": "Not at all, that's my job. I handle the technical side and explain things in plain English, so you can focus on running your business."
     },
     {
       "question": "Where are you based, and do you work remotely?",
-      "answer": "I'm based in Kelowna, BC, and work remotely with clients and teams anywhere."
+      "answer": "I'm based in Kelowna, BC, and I work with clients anywhere. Everything can be done remotely, on your schedule."
     },
     {
       "question": "Are you available for new work?",
-      "answer": "Yes—I'm available for freelance web and AI projects, and I'm reliable about timelines and communication. The contact form below is the fastest way to start."
-    },
-    {
-      "question": "What technologies do you work with?",
-      "answer": "Day to day I work with Astro, Django, FastAPI, PyTorch, and Docker, across Python and JavaScript."
+      "answer": "Yes, I'm taking on new projects, and I'm reliable about timelines and keeping you in the loop. The contact form below is the fastest way to start."
     }
   ]
 }

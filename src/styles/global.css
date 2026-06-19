@@ -276,19 +276,35 @@ a {
 
 .hero-meta {
   position: absolute;
-  top: 108px;
+  top: 104px;
   display: grid;
-  gap: 6px;
+  gap: 7px;
   z-index: 4;
-  font: 9px/1 var(--mono);
+  font: 11px/1.2 var(--mono);
+  letter-spacing: .04em;
 }
 
 .hero-meta span {
-  opacity: 0.55;
+  opacity: 0.6;
+  text-transform: uppercase;
 }
 
 .hero-meta strong {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -.01em;
+}
+
+.hero-meta--right strong::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 9px var(--acid);
+  vertical-align: middle;
 }
 
 .hero-meta--left {
@@ -347,7 +363,7 @@ a {
 
 .signal-disc {
   position: relative;
-  width: 56%;
+  width: 62%;
   aspect-ratio: .72;
   overflow: hidden;
   display: grid;
@@ -399,29 +415,66 @@ a {
   animation: scan 4s ease-in-out infinite;
 }
 
+/* Electrons: each satellite rides a centered orbit ring that spins; the
+   label counter-rotates so it stays upright as it revolves. Radii are % of
+   the sculpture, so the whole atom scales responsively. */
+.electron-field {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit var(--dur, 26s) linear infinite;
+  animation-delay: var(--d, 0s);
+}
+
+.orbit--outer { inset: 2%; --dur: 28s; }
+
+.orbit--inner {
+  inset: 14%;
+  --dur: 20s;
+  animation-direction: reverse;
+}
+
 .satellite {
   position: absolute;
-  width: 58px;
-  height: 58px;
+  top: 0;
+  left: 50%;
+  width: 99px;
+  height: 99px;
+  transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
   border: 1px solid rgba(17,23,22,.28);
   border-radius: 50%;
-  background: rgba(238,241,234,.3);
+  background: rgba(238,241,234,.34);
   backdrop-filter: blur(8px);
-  font: 8px/1 var(--mono);
+  box-shadow: 0 12px 26px rgba(17,23,22,.15);
 }
 
-.satellite--a { top: 12%; right: 8%; }
-.satellite--b { left: 1%; bottom: 31%; background: var(--acid); }
-.satellite--c { right: 4%; bottom: 30%; background: var(--orange); }
-.satellite--d { top: 6%; left: 7%; background: #a9e5d6; }
-.satellite--e { left: 4%; bottom: 9%; background: #c8b8ff; }
-.satellite--f { top: 2%; left: 41%; background: #ffd6a3; }
+.satellite b {
+  display: block;
+  font: 700 14px/1 var(--mono);
+  letter-spacing: .04em;
+  animation: orbit var(--dur, 26s) linear infinite reverse;
+  animation-delay: var(--d, 0s);
+}
+
+.orbit--inner .satellite b { animation-direction: normal; }
+
+.satellite--acid { background: var(--acid); }
+.satellite--orange { background: var(--orange); }
+.satellite--mint { background: #a9e5d6; }
+.satellite--lilac { background: #c8b8ff; }
+.satellite--peach { background: #ffd6a3; }
 
 /* Longer area labels need a tighter fit than the short WEB/AI/DATA badges. */
-.satellite--area {
-  font-size: 6.5px;
+.satellite--area b {
+  font-size: 10.5px;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -429,7 +482,7 @@ a {
 .orbit-card {
   position: absolute;
   z-index: 10;
-  width: 145px;
+  width: 210px;
   padding: 0;
   border: 0;
   text-align: left;
@@ -440,7 +493,7 @@ a {
 
 .orbit-card__visual {
   position: relative;
-  width: 104px;
+  width: 100%;
   aspect-ratio: 1;
   margin-bottom: 10px;
   overflow: hidden;
@@ -513,11 +566,15 @@ a {
   text-transform: uppercase;
 }
 
-.orbit-card--one { left: 4vw; top: 25%; animation-delay: .35s; }
-.orbit-card--two { left: 14vw; top: 51%; animation-delay: .45s; }
-.orbit-card--three { right: 8vw; top: 24%; animation-delay: .55s; }
-.orbit-card--four { right: 2vw; top: 52%; animation-delay: .65s; }
-.orbit-card--five { left: 6vw; top: 69%; animation-delay: .75s; }
+/* Project windows: varied sizes so the showpiece + live-video builds catch
+   the eye. --one (Skinny Bob) is the 3x hero; video builds 2.5x; marks 2x. */
+/* Scattered, not columned. Size = importance: Skinny Bob (lead) biggest,
+   OKGN booking second, TA third, GCRTC + GPT-2 smallest. */
+.orbit-card--one { left: 1.5vw; top: 17%; width: 300px; animation-delay: .35s; }
+.orbit-card--five { left: 11vw; top: 60%; width: 235px; animation-delay: .75s; }
+.orbit-card--two { right: 4vw; top: 18%; width: 200px; animation-delay: .45s; }
+.orbit-card--three { right: 1.5vw; top: 50%; width: 162px; animation-delay: .55s; }
+.orbit-card--four { right: 14vw; top: 44%; width: 150px; animation-delay: .65s; }
 
 .hero-console {
   position: absolute;
@@ -758,8 +815,28 @@ a {
 }
 
 .project-card__art:has(.project-card__video)::before,
-.project-card__art:has(.project-card__video)::after {
+.project-card__art:has(.project-card__video)::after,
+.project-card__art:has(.project-card__image)::before,
+.project-card__art:has(.project-card__image)::after {
   display: none;
+}
+
+.project-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  background: #080b0b;
+  filter: saturate(.9) contrast(1.03);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .4s ease;
+}
+
+.project-card button:hover .project-card__image,
+.project-card a:hover .project-card__image {
+  transform: scale(1.025);
+  filter: saturate(1) contrast(1.07);
 }
 
 .project-card__video {
@@ -1510,6 +1587,15 @@ a {
   display: none;
 }
 
+.dialog-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
 .dialog-showcase-backdrop {
   position: absolute;
   inset: 0;
@@ -1548,7 +1634,7 @@ a {
 }
 
 .dialog-copy {
-  padding: 80px 55px 50px;
+  padding: 56px 55px 44px;
 }
 
 .dialog-eyebrow {
@@ -1558,7 +1644,7 @@ a {
 }
 
 .dialog-copy h2 {
-  margin: 20px 0 25px;
+  margin: 16px 0 18px;
   font: 50px/.95 var(--serif);
   letter-spacing: -.04em;
 }
@@ -1569,7 +1655,7 @@ a {
 }
 
 .dialog-description {
-  margin: 28px 0;
+  margin: 20px 0;
   opacity: .68;
   font: 14px/1.6 var(--sans);
 }
@@ -1602,7 +1688,7 @@ a {
 }
 
 .dialog-highlights span {
-  padding: 14px 0;
+  padding: 11px 0;
   display: flex;
   gap: 18px;
   border-bottom: 1px solid rgba(255,255,255,.16);
@@ -1729,6 +1815,14 @@ a {
     width: min(520px, 82vw);
     transform: translateX(-50%);
   }
+
+  .satellite {
+    width: 78px;
+    height: 78px;
+  }
+
+  .satellite b { font-size: 12px; }
+  .satellite--area b { font-size: 9px; }
 
   .orbit-field {
     position: absolute;
@@ -1960,6 +2054,205 @@ a {
   }
 }
 
+/* ---- Engagements / packages ---- */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--hairline);
+  background: rgba(238, 241, 234, 0.19);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s, transform .6s, border-color .35s, background .35s;
+}
+
+.package-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.package-card:hover {
+  border-color: var(--ink);
+  background: rgba(238, 241, 234, 0.4);
+}
+
+.package-card--featured {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.package-card--featured:hover {
+  background: var(--ink);
+}
+
+.package-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.package-index {
+  font: 12px/1 var(--mono);
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.package-tag {
+  padding: 5px 10px;
+  border-radius: 100px;
+  background: var(--acid);
+  color: var(--ink);
+  font: 9px/1 var(--mono);
+  letter-spacing: 0.13em;
+}
+
+.package-card h3 {
+  margin: 0;
+  font: 500 36px/1 var(--serif);
+  letter-spacing: -0.03em;
+}
+
+.package-scope {
+  margin-top: 8px;
+  font: 10px/1.3 var(--mono);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.package-card--featured .package-scope {
+  color: var(--acid);
+}
+
+.package-blurb {
+  margin: 16px 0 22px;
+  font: 14px/1.55 var(--sans);
+  opacity: 0.85;
+}
+
+.package-features {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+
+.package-features li {
+  display: flex;
+  gap: 10px;
+  font: 13px/1.4 var(--mono);
+}
+
+.package-features li i {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.package-card--featured .package-features li i {
+  color: var(--acid);
+}
+
+.package-foot {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.package-price {
+  font: 500 20px/1 var(--serif);
+  letter-spacing: -0.02em;
+}
+
+.package-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: 10px/1 var(--mono);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.package-cta span {
+  transition: transform .3s;
+}
+
+.package-cta:hover span {
+  transform: translate(3px, -3px);
+}
+
+.seo-band {
+  margin-top: 17px;
+  padding: 34px;
+  border: 1px solid var(--hairline);
+  background:
+    radial-gradient(rgba(255, 114, 86, 0.5) .8px, transparent .8px),
+    rgba(238, 241, 234, 0.19);
+  background-size: 56px 56px;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 5vw;
+  align-items: center;
+}
+
+.seo-band__head p {
+  margin: 14px 0 0;
+  font: 500 clamp(24px, 2.4vw, 32px)/1.15 var(--serif);
+  letter-spacing: -0.02em;
+}
+
+.seo-band__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 26px;
+}
+
+.seo-band__list li {
+  display: flex;
+  gap: 10px;
+  font: 13px/1.4 var(--mono);
+}
+
+.seo-band__list li i {
+  color: var(--orange);
+  font-style: normal;
+}
+
+@media (max-width: 900px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-band {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 650px) {
+  .seo-band {
+    padding: 24px;
+  }
+
+  .seo-band__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -1967,4 +2260,21 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
+
+  /* Without motion, freeze the electrons into a distributed static atom
+     instead of letting all six collapse to the top of their rings. */
+  .orbit { animation: none !important; }
+  .satellite b { animation: none !important; transform: none !important; }
+  .electron-field .orbit:nth-child(1) { transform: rotate(0deg); }
+  .electron-field .orbit:nth-child(2) { transform: rotate(120deg); }
+  .electron-field .orbit:nth-child(3) { transform: rotate(240deg); }
+  .electron-field .orbit:nth-child(4) { transform: rotate(60deg); }
+  .electron-field .orbit:nth-child(5) { transform: rotate(180deg); }
+  .electron-field .orbit:nth-child(6) { transform: rotate(300deg); }
+  .electron-field .orbit:nth-child(1) .satellite b { transform: rotate(0deg) !important; }
+  .electron-field .orbit:nth-child(2) .satellite b { transform: rotate(-120deg) !important; }
+  .electron-field .orbit:nth-child(3) .satellite b { transform: rotate(-240deg) !important; }
+  .electron-field .orbit:nth-child(4) .satellite b { transform: rotate(-60deg) !important; }
+  .electron-field .orbit:nth-child(5) .satellite b { transform: rotate(-180deg) !important; }
+  .electron-field .orbit:nth-child(6) .satellite b { transform: rotate(-300deg) !important; }
 }
