@@ -1,0 +1,9 @@
+---
+// Modal overlay opened from project cards. Content is injected at runtime
+// by the page interaction script (see index.astro) from #portfolio-data.
+---
+
+<dialog class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project">CLOSE <span>×</span></button>
+  <div class="dialog-content"></div>
+</dialog>

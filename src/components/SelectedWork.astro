@@ -1,0 +1,79 @@
+---
+import data from "../data/portfolio.json";
+
+const { featured } = data;
+---
+
+<section class="section work-section" id="work">
+  <div class="section-heading">
+    <div>
+      <span class="section-number">01 / SELECTED WORK</span>
+      <h2>Client systems &<br /><em>serious experiments.</em></h2>
+    </div>
+    <p>Real client work, taken from brief to launch: expressive where it should be, invisible where it needs to be, and engineered for the person using it.</p>
+  </div>
+
+  <div class="filter-row" role="group" aria-label="Filter selected work">
+    <button class="filter-button is-active" type="button" data-filter="all">All work</button>
+    <button class="filter-button" type="button" data-filter="web">Web</button>
+    <button class="filter-button" type="button" data-filter="ai">AI / ML</button>
+    <button class="filter-button" type="button" data-filter="systems">Systems</button>
+  </div>
+
+  <div class="project-grid">
+    {
+      featured.map((project, index) => {
+        const CardControl = project.websiteUrl ? "a" : "button";
+
+        return (
+          <article class="project-card" data-category={project.category} style={`--accent:${project.accent}`}>
+            <CardControl
+              href={project.websiteUrl}
+              target={project.websiteUrl ? "_blank" : undefined}
+              rel={project.websiteUrl ? "noreferrer" : undefined}
+              type={project.websiteUrl ? undefined : "button"}
+              data-project={project.websiteUrl ? undefined : project.id}
+              aria-label={project.websiteUrl ? `Visit ${project.title}` : `Read about ${project.title}`}
+            >
+            <div class="project-card__topline">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span>{project.eyebrow}</span>
+            </div>
+            <div class="project-card__art" aria-hidden="true">
+              {project.showcaseVideo ? (
+                <>
+                  <video
+                    class="project-card__video"
+                    src={project.showcaseVideo}
+                    poster={project.showcasePoster}
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                  ></video>
+                  <span class="project-card__reel-label">MAIN SITE → HIDDEN ARCHIVE</span>
+                </>
+              ) : (
+                <>
+                  <span class="project-card__mark">{project.mark}</span>
+                  <span class="art-axis art-axis--x"></span>
+                  <span class="art-axis art-axis--y"></span>
+                  <span class="art-dot art-dot--a"></span>
+                  <span class="art-dot art-dot--b"></span>
+                </>
+              )}
+              <span class="art-caption">{project.type}</span>
+            </div>
+            <div class="project-card__copy">
+              <h3>{project.title}</h3>
+              <p>{project.summary}</p>
+              <span class="open-label">{project.websiteUrl ? "VISIT WEBSITE" : "OPEN CASE NOTE"} <i>↗</i></span>
+            </div>
+            </CardControl>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>

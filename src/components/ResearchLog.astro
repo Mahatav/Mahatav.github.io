@@ -1,0 +1,44 @@
+---
+import data from "../data/portfolio.json";
+
+const { research } = data;
+---
+
+<section class="section research-section" id="research">
+  <div class="section-heading section-heading--research">
+    <div>
+      <span class="section-number">03 / RESEARCH LOG</span>
+      <h2>Questions worth<br /><em>building around.</em></h2>
+    </div>
+    <p>Directed studies supervised by Dr. Bowen Hui at UBC Okanagan, spanning language-model behavior, code provenance, and software process.</p>
+  </div>
+  <div class="research-track">
+    {
+      research.map((item, index) => (
+        <article class="research-card">
+          <div class="research-card__meta">
+            <span>R-{String(index + 1).padStart(2, "0")}</span>
+            <span>{item.period}</span>
+          </div>
+          <span class="research-code">{item.code}</span>
+          {"status" in item && <span class:list={["research-status", { "is-review": item.status === "Under review" }]}>{item.status}</span>}
+          <h3>{item.title}</h3>
+          <p>{item.summary}</p>
+          {"paperPath" in item && (
+            <a
+              class="research-paper-link"
+              href={`${import.meta.env.BASE_URL}${item.paperPath}`}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Read ${item.paperTitle}`}
+            >
+              <span>READ PAPER</span>
+              <i>PDF ↗</i>
+            </a>
+          )}
+          <div class="research-tags">{item.tags.map((tag) => <span>{tag}</span>)}</div>
+        </article>
+      ))
+    }
+  </div>
+</section>

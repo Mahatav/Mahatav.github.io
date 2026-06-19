@@ -1,0 +1,30 @@
+---
+import data from "../data/portfolio.json";
+
+const { skills } = data;
+---
+
+<section class="section about-section" id="about">
+  <div class="about-statement">
+    <span class="section-number">04 / OPERATING NOTES</span>
+    <p>I like projects with a strange edge and a practical center—where <em>research discipline</em>, strong interaction design, and reliable infrastructure all have to get along.</p>
+  </div>
+
+  <div class="about-grid">
+    <article class="education-card">
+      <span class="card-label">EDUCATION</span>
+      <span class="education-mark">UBC<span>O</span></span>
+      <h3>B.Sc. Computer Science</h3>
+      <p>Minor in Data Science<br />University of British Columbia<br />2023—2026</p>
+    </article>
+    <article class="skills-card">
+      <span class="card-label">WORKING SET</span>
+      <div class="skill-columns">
+        <div><strong>LANGUAGES</strong>{skills.languages.map((skill) => <span>{skill}</span>)}</div>
+        <div><strong>PLATFORMS</strong>{skills.platforms.map((skill) => <span>{skill}</span>)}</div>
+        <div><strong>DATA / VISION</strong>{skills.data.map((skill) => <span>{skill}</span>)}</div>
+        <div><strong>TOOLS</strong>{skills.tools.map((skill) => <span>{skill}</span>)}</div>
+      </div>
+    </article>
+  </div>
+</section>

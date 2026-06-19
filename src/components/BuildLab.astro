@@ -1,0 +1,29 @@
+---
+import data from "../data/portfolio.json";
+
+const { experiments } = data;
+---
+
+<section class="section lab-section" id="lab">
+  <div class="lab-intro">
+    <span class="section-number">02 / BUILD LAB</span>
+    <h2>Machines that<br /><em>look back.</em></h2>
+    <p>Computer-vision prototypes built to understand the full loop: sensing, deciding, and moving something in the physical world.</p>
+  </div>
+  <div class="experiment-list">
+    {
+      experiments.map((item, index) => (
+        <article class="experiment-row">
+          <span class="experiment-index">{String(index + 1).padStart(2, "0")}</span>
+          <div class="experiment-scope" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="experiment-copy">
+            <span>{item.year} / {item.category}</span>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+          </div>
+          <div class="tag-stack">{item.stack.map((tag) => <span>{tag}</span>)}</div>
+        </article>
+      ))
+    }
+  </div>
+</section>

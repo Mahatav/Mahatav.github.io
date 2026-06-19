@@ -3,13 +3,13 @@
     "name": "Mahatav Arora",
     "shortName": "MA",
     "role": "Full-stack developer · AI/ML researcher",
-    "intro": "I build expressive web systems, practical AI tools, and research pipelines. The goal is always the same: turn complicated material into something people can actually use.",
+    "intro": "I'm a freelance developer you can count on to build standout websites and dependable AI systems—and to ship them. I take projects from first brief to production launch, and I sweat the details so the result works for the people who use it.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
     "instagram": "https://www.instagram.com/mahatav.arora/",
-    "availability": "Available for select web and applied AI projects"
+    "availability": "Available for freelance web and AI builds—dependable from first brief to launch"
   },
   "featured": [
     {
@@ -31,17 +31,18 @@
       "type": "Client platform"
     },
     {
-      "id": "okgn",
-      "title": "OKGN Boat Rentals",
-      "eyebrow": "Two summer contracts · 2025–26",
-      "category": "web",
-      "mark": "OK",
-      "accent": "#d6ff61",
-      "summary": "A faster, clearer rental website and multi-step booking flow built for peak-season traffic.",
-      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, and passenger details. It also covers validation, spam protection, rate limiting, and PHP email delivery.",
-      "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
-      "highlights": ["Multi-step booking", "Local search improvements", "Responsive rebuild"],
-      "type": "Client platform"
+      "id": "ta-system",
+      "title": "TA Application System",
+      "eyebrow": "Capstone · 2025",
+      "category": "systems",
+      "mark": "TA",
+      "accent": "#c8b8ff",
+      "summary": "A Django hiring workflow with AI resume extraction and coordinator-grade filtering.",
+      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application. From there I surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
+      "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
+      "highlights": ["PDF skill extraction", "Advanced applicant filters", "Multi-container stack"],
+      "githubUrl": "https://github.com/UBCO-COSC499-S2025/team-11-capstone-team-11",
+      "type": "Full-stack system"
     },
     {
       "id": "gcrtc",
@@ -72,17 +73,18 @@
       "type": "ML engineering"
     },
     {
-      "id": "ta-system",
-      "title": "TA Application System",
-      "eyebrow": "Capstone · 2025",
-      "category": "systems",
-      "mark": "TA",
-      "accent": "#c8b8ff",
-      "summary": "A Django hiring workflow with AI resume extraction and coordinator-grade filtering.",
-      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application. From there I surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
-      "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
-      "highlights": ["PDF skill extraction", "Advanced applicant filters", "Multi-container stack"],
-      "type": "Full-stack system"
+      "id": "okgn",
+      "title": "OKGN Boat Rentals",
+      "eyebrow": "Two summer contracts · 2025–26",
+      "category": "web",
+      "mark": "OK",
+      "accent": "#d6ff61",
+      "summary": "A faster, clearer rental website and multi-step booking flow built for peak-season traffic.",
+      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, and passenger details. It also covers validation, spam protection, rate limiting, and PHP email delivery.",
+      "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
+      "highlights": ["Multi-step booking", "Local search improvements", "Responsive rebuild"],
+      "websiteUrl": "https://okgnboatrentals.ca/",
+      "type": "Client platform"
     }
   ],
   "experiments": [
@@ -167,7 +169,7 @@
   "faq": [
     {
       "question": "What kind of projects do you take on?",
-      "answer": "Expressive websites, full-stack systems, and applied AI/ML work—from creative client builds to research pipelines."
+      "answer": "Standout websites, full-stack systems, and practical AI/ML tools—from creative client builds to production research pipelines. If it lives on the web or runs a model, I can build and ship it."
     },
     {
       "question": "Where are you based, and do you work remotely?",
@@ -175,7 +177,7 @@
     },
     {
       "question": "Are you available for new work?",
-      "answer": "I'm available for select web and applied AI projects. The contact form below is the fastest way to start."
+      "answer": "Yes—I'm available for freelance web and AI projects, and I'm reliable about timelines and communication. The contact form below is the fastest way to start."
     },
     {
       "question": "What technologies do you work with?",

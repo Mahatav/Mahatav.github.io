@@ -1,0 +1,30 @@
+---
+import data from "../data/portfolio.json";
+
+const { faq } = data;
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<section class="section faq-section" id="faq">
+  <div class="faq-statement">
+    <span class="section-number">05 / COMMON QUESTIONS</span>
+    <p>The things people usually <em>ask first.</em></p>
+  </div>
+  <dl class="faq-list">
+    {faq.map((item) => (
+      <div class="faq-item">
+        <dt>{item.question}</dt>
+        <dd>{item.answer}</dd>
+      </div>
+    ))}
+  </dl>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>

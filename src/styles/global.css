@@ -213,7 +213,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 1100px;
+  min-height: 900px;
   height: 100svh;
   overflow: hidden;
   border-bottom: 1px solid var(--hairline);
@@ -231,7 +231,7 @@ a {
 
 .hero-copy {
   position: absolute;
-  top: 13%;
+  top: 9%;
   left: 50%;
   z-index: 5;
   width: min(760px, 72vw);
@@ -303,7 +303,7 @@ a {
 .signal-sculpture {
   position: absolute;
   left: 50%;
-  top: 38%;
+  top: 32%;
   width: min(560px, 55vw);
   aspect-ratio: 1;
   transform: translate(-50%, -9%);
@@ -414,7 +414,17 @@ a {
 
 .satellite--a { top: 12%; right: 8%; }
 .satellite--b { left: 1%; bottom: 31%; background: var(--acid); }
-.satellite--c { right: 3%; bottom: 12%; background: var(--orange); }
+.satellite--c { right: 4%; bottom: 30%; background: var(--orange); }
+.satellite--d { top: 6%; left: 7%; background: #a9e5d6; }
+.satellite--e { left: 4%; bottom: 9%; background: #c8b8ff; }
+.satellite--f { top: 2%; left: 41%; background: #ffd6a3; }
+
+/* Longer area labels need a tighter fit than the short WEB/AI/DATA badges. */
+.satellite--area {
+  font-size: 6.5px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
 
 .orbit-card {
   position: absolute;

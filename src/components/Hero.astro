@@ -1,0 +1,100 @@
+---
+import data from "../data/portfolio.json";
+
+const { profile, featured } = data;
+const orbitPositions = [
+  "orbit-card--one",
+  "orbit-card--two",
+  "orbit-card--three",
+  "orbit-card--four",
+  "orbit-card--five",
+];
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-meta hero-meta--left">
+    <span>BASED IN</span>
+    <strong>{profile.location}</strong>
+  </div>
+  <div class="hero-meta hero-meta--right">
+    <span>FIELD NOTES</span>
+    <strong>2023—2026</strong>
+  </div>
+
+  <div class="hero-copy">
+    <h1 id="hero-title">
+      Serious builds for<br />
+      <em>brands that ship.</em>
+    </h1>
+  </div>
+
+  <div class="signal-sculpture" aria-label="MA monogram sculpture">
+    <div class="halo halo--outer"></div>
+    <div class="halo halo--inner"></div>
+    <div class="signal-disc">
+      <span class="signal-disc__label">MA</span>
+      <div class="scanline"></div>
+    </div>
+    <div class="satellite satellite--a">WEB</div>
+    <div class="satellite satellite--b">AI</div>
+    <div class="satellite satellite--c">DATA</div>
+    <div class="satellite satellite--d satellite--area">SYSTEMS</div>
+    <div class="satellite satellite--e satellite--area">APPLICATIONS</div>
+    <div class="satellite satellite--f satellite--area">RESEARCH</div>
+  </div>
+
+  <div class="orbit-field" aria-label="Featured project shortcuts">
+    {
+      featured.map((project, index) => (
+        <button
+          class={`orbit-card ${orbitPositions[index]}`}
+          type="button"
+          data-project={project.id}
+          style={`--accent:${project.accent}`}
+          aria-label={`Open ${project.title}`}
+        >
+          <span class="orbit-card__visual">
+            {project.showcaseVideo ? (
+              <video
+                class="orbit-card__video"
+                src={project.showcaseVideo}
+                poster={project.showcasePoster}
+                muted
+                autoplay
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+            ) : (
+              <span class="orbit-card__mark">{project.mark}</span>
+            )}
+            <span class="orbit-card__rings"></span>
+          </span>
+          <span class="orbit-card__name">{project.title}</span>
+          <span class="orbit-card__type">{project.type}</span>
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="hero-console">
+    <div class="console-topline">
+      <span>MA.OS / PORTFOLIO</span>
+      <span class="live-indicator"><i></i> ONLINE</span>
+    </div>
+    <div class="console-body">
+      <div>
+        <span class="console-label">CURRENT MODE</span>
+        <strong>FULL-STACK + APPLIED AI</strong>
+      </div>
+      <p>{profile.availability}</p>
+    </div>
+    <div class="console-actions">
+      <a href="#work">ENTER THE WORK <span>↓</span></a>
+      <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">RESUME <span>↗</span></a>
+    </div>
+  </div>
+
+  <span class="scroll-note">SCROLL TO EXPLORE <i></i></span>
+</section>
