@@ -1,0 +1,31 @@
+# Mahatav Arora
+
+> Full-stack developer and AI/ML researcher based in Kelowna, BC. I build expressive web systems, practical AI tools, and research pipelines that turn complicated material into something people can actually use. Available for select web and applied AI projects.
+
+This is the personal portfolio of Mahatav Arora, a B.Sc. Computer Science student (Data Science minor) at the University of British Columbia. Work spans freelance web platforms, full-stack systems, computer vision, and applied AI/ML research.
+
+## Main page
+
+- [Portfolio home](https://mahatav.github.io/): Overview of selected work, build experiments, research, and contact details.
+- [Resume (PDF)](https://mahatav.github.io/Mahatav_Arora_Resume.pdf): Full CV with education, experience, and skills.
+
+## Selected work
+
+- [Channeling Skinny Bob](https://channelingskinnybob.com/): End-to-end freelance build—a cinematic content platform with creative direction, a responsive Astro frontend, a hidden command-line archive, and a secure evidence-upload API.
+- [OKGN Boat Rentals](https://mahatav.github.io/#work): Rental website rebuild with a multi-step booking flow, validation, spam protection, and PHP email delivery.
+- [Green Construction Research & Training Center](https://github.com/Mahatav/GCRTC-Website): Multi-page publishing system for sustainable-construction research, with custom page indexing and search.
+- [GPT-2, From Scratch](https://github.com/Mahatav/GPT-2_Scratch): A tested GPT-2-style language model implemented from tokenizer to generation loop in PyTorch.
+- [TA Application System](https://mahatav.github.io/#work): Django hiring workflow with Ollama/FastAPI resume extraction and coordinator-grade applicant filtering.
+
+## Research
+
+- [Corpus-Conditioned Bias (PDF)](https://mahatav.github.io/research/Corpus_Conditioned_Bias.pdf): Training GPT-2 models on Eastern and Western philosophical texts and measuring output divergence across 284 prompts.
+- [Pre/Post AI Comparisons (PDF)](https://mahatav.github.io/research/Pre_Post_AI_Comparisons.pdf): CodeBERT classifiers and repository scanners estimating whether capstone source files are human-written or AI-generated.
+- [Jersey Number Recognition (PDF)](https://mahatav.github.io/research/Jersey_Number_Recognition.pdf): A multi-stage SoccerNet pipeline for reading jersey numbers in broadcast soccer video (under review).
+
+## Contact
+
+- [GitHub](https://github.com/Mahatav): Open-source projects and code.
+- [LinkedIn](https://linkedin.com/in/mahatav-arora): Professional profile and contact.
+- [Contact form](https://mahatav.github.io/#contact): Reach out about web and applied AI projects.
+- Email: mahatavarora@gmail.com

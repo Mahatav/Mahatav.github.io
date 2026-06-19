@@ -3,28 +3,32 @@
     "name": "Mahatav Arora",
     "shortName": "MA",
     "role": "Full-stack developer · AI/ML researcher",
-    "intro": "I build expressive web systems, practical AI tools, and research pipelines that turn complicated material into something people can actually use.",
+    "intro": "I build expressive web systems, practical AI tools, and research pipelines. The goal is always the same: turn complicated material into something people can actually use.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
-    "phone": "250-681-6810",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
+    "instagram": "https://www.instagram.com/mahatav.arora/",
     "availability": "Available for select web and applied AI projects"
   },
   "featured": [
     {
       "id": "skinny-bob",
       "title": "Channeling Skinny Bob",
-      "eyebrow": "Contract website · 2026",
+      "eyebrow": "End-to-end freelance build · 2026",
       "category": "web",
       "mark": "SB",
       "accent": "#ff7256",
-      "summary": "An alien archive disguised as a retro terminal, built for a YouTube creator and their community.",
-      "description": "A custom interactive archive for videos, documents, audio, and written lore. The experience uses command parsing, autocomplete, access levels, animated output, hidden commands, and file-opening workflows.",
-      "stack": ["HTML", "CSS", "JavaScript", "WebGL", "Rive", "Docker", "Nginx"],
-      "highlights": ["Terminal command system", "3D and motion assets", "Dockerized deployment"],
-      "githubUrl": "https://github.com/Mahatav/alien-website",
-      "type": "Client system"
+      "summary": "A cinematic content platform that turns a creator’s niche archive into a world their audience can explore.",
+      "description": "I took this project from a loose creative brief to a production launch. That meant shaping the visual direction, building the responsive Astro experience, and organizing a large research library. I also engineered a secret command-line archive and handled the private evidence-upload API and deployment. It is the kind of freelance work I love: distinctive on the surface, carefully engineered underneath, and built around what the client’s audience should feel and do.",
+      "stack": ["Astro", "CSS", "JavaScript", "Canvas", "Rive", "Node.js", "Docker", "Nginx"],
+      "highlights": ["Creative direction through production", "21 public dossiers + 55-file hidden archive", "Secure evidence intake and deployment"],
+      "services": ["Creative direction", "UX and interaction design", "Full-stack development", "Production deployment"],
+      "proof": ["21 public case dossiers", "55-file command-line archive", "Private 20 MB evidence uploads"],
+      "showcaseVideo": "/media/channeling-skinny-bob-showcase.mp4",
+      "showcasePoster": "/media/channeling-skinny-bob-poster.jpg",
+      "websiteUrl": "https://channelingskinnybob.com/",
+      "type": "Client platform"
     },
     {
       "id": "okgn",
@@ -34,7 +38,7 @@
       "mark": "OK",
       "accent": "#d6ff61",
       "summary": "A faster, clearer rental website and multi-step booking flow built for peak-season traffic.",
-      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, passenger details, validation, spam protection, rate limiting, and PHP email delivery.",
+      "description": "Rebuilt the customer journey across fleet, reviews, FAQ, crew, and booking pages. The booking system handles date and time selection, vessels, and passenger details. It also covers validation, spam protection, rate limiting, and PHP email delivery.",
       "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
       "highlights": ["Multi-step booking", "Local search improvements", "Responsive rebuild"],
       "type": "Client platform"
@@ -47,7 +51,7 @@
       "mark": "GC",
       "accent": "#a9e5d6",
       "summary": "A multi-page publishing system for sustainable construction research, events, people, and funding.",
-      "description": "Redesigned and maintained the Green Construction Research & Training Center site, added custom page indexing and search, repaired the contact workflow, and maintained the Wilden Living Lab site.",
+      "description": "Redesigned and maintained the Green Construction Research & Training Center site. I added custom page indexing and search, repaired the contact workflow, and maintained the Wilden Living Lab site.",
       "stack": ["Astro", "JavaScript", "PHP", "Content systems", "Search"],
       "highlights": ["Custom site search", "Research publishing", "Contact integration"],
       "githubUrl": "https://github.com/Mahatav/GCRTC-Website",
@@ -61,7 +65,7 @@
       "mark": "G2",
       "accent": "#ffd6a3",
       "summary": "A tested GPT-2-style language model implementation, from tokenizer to generation loop.",
-      "description": "Implemented embeddings, causal multi-head attention, transformer blocks, MLPs, weight tying, AdamW, BPE and character tokenization, checkpointing, evaluation, and top-k/top-p generation.",
+      "description": "Implemented embeddings, causal multi-head attention, transformer blocks, MLPs, and weight tying. The training and inference side covers AdamW, BPE and character tokenization, checkpointing, evaluation, and top-k/top-p generation.",
       "stack": ["Python", "PyTorch", "NumPy", "Transformers", "BPE"],
       "highlights": ["100+ tests", "Custom training loop", "Sampling utilities"],
       "githubUrl": "https://github.com/Mahatav/GPT-2_Scratch",
@@ -75,7 +79,7 @@
       "mark": "TA",
       "accent": "#c8b8ff",
       "summary": "A Django hiring workflow with AI resume extraction and coordinator-grade filtering.",
-      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application, surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
+      "description": "Connected an Ollama-backed FastAPI extraction service to a Django application. From there I surfaced validated skills in the application flow, expanded coordinator filters, and configured the multi-service development stack.",
       "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
       "highlights": ["PDF skill extraction", "Advanced applicant filters", "Multi-container stack"],
       "type": "Full-stack system"
@@ -103,7 +107,7 @@
       "title": "Autonomous Landing Pad Detection",
       "year": "2023",
       "category": "vision",
-      "summary": "A UAV landing prototype using HSV masks, moments, Hough circles, OCR, and DroneKit logic.",
+      "summary": "A UAV landing prototype that combines HSV masks, moments, Hough circles, and OCR. DroneKit logic ties the detections to flight control.",
       "stack": ["Python", "OpenCV", "DroneKit", "Tesseract"]
     },
     {
@@ -111,7 +115,7 @@
       "title": "Banking eKYC Prototypes",
       "year": "2024",
       "category": "ai",
-      "summary": "Face capture, labelling, detection, landmarks, and head-pose workflows for identity research.",
+      "summary": "Identity-research workflows for face capture, labelling, and detection. They also cover facial landmarks and head-pose estimation.",
       "stack": ["YOLOv8", "dlib", "OpenCV", "Python"]
     }
   ],
@@ -120,7 +124,7 @@
       "title": "Corpus-Conditioned LLM Pre-Training",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Trained parallel GPT-2-style models across Eastern and Western philosophical corpora, then measured divergence across 284 prompts and 14 categories.",
+      "summary": "Trained parallel GPT-2-style models on Eastern and Western philosophical corpora. I then measured how their outputs diverged across 284 prompts and 14 categories.",
       "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"],
       "paperTitle": "Corpus-Conditioned Bias: Training GPT-2 Models on Eastern and Western Philosophical Texts",
       "paperPath": "research/Corpus_Conditioned_Bias.pdf",
@@ -130,7 +134,7 @@
       "title": "Human vs. AI Code Analytics",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Fine-tuned CodeBERT classifiers and built repository scanners that estimate whether capstone source files are human-written, AI-generated, or uncertain.",
+      "summary": "Fine-tuned CodeBERT classifiers and built repository scanners for capstone projects. Each scanner estimates whether a source file is human-written, AI-generated, or uncertain.",
       "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"],
       "paperTitle": "Pre-Post AI Comparisons: Behavioural Changes in Student Capstone Projects",
       "paperPath": "research/Pre_Post_AI_Comparisons.pdf",
@@ -140,14 +144,14 @@
       "title": "Software Process Analysis",
       "period": "Sep 2025–Apr 2026",
       "code": "COSC 447",
-      "summary": "Built a GitHub analytics pipeline for pull requests, commits, reviews, branches, communication patterns, and process-model visualizations.",
+      "summary": "Built a GitHub analytics pipeline covering pull requests, commits, reviews, and branches. It also surfaces communication patterns and process-model visualizations.",
       "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
     },
     {
       "title": "Jersey Number Recognition",
       "period": "2026",
       "code": "COMPUTER VISION",
-      "summary": "Built and evaluated a multi-stage SoccerNet pipeline using NAFNet restoration, YOLOv8 pose crops, PARSeq, vision-language models, and confidence-weighted tracklet aggregation.",
+      "summary": "Built and evaluated a multi-stage SoccerNet pipeline for reading jersey numbers. The stages combine NAFNet restoration, YOLOv8 pose crops, PARSeq, vision-language models, and confidence-weighted tracklet aggregation.",
       "tags": ["SoccerNet", "YOLOv8 Pose", "PARSeq", "Vision-language models"],
       "paperTitle": "Jersey Number Recognition in Broadcast Soccer Video",
       "paperPath": "research/Jersey_Number_Recognition.pdf",
@@ -159,5 +163,23 @@
     "platforms": ["Astro", "Django", "FastAPI", "Docker", "Nginx", "Ollama", "WordPress"],
     "data": ["PyTorch", "Pandas", "NumPy", "OpenCV", "Transformers", "NetworkX"],
     "tools": ["Git", "GitHub API", "CUDA", "MySQL", "VS Code", "PyCharm"]
-  }
+  },
+  "faq": [
+    {
+      "question": "What kind of projects do you take on?",
+      "answer": "Expressive websites, full-stack systems, and applied AI/ML work—from creative client builds to research pipelines."
+    },
+    {
+      "question": "Where are you based, and do you work remotely?",
+      "answer": "I'm based in Kelowna, BC, and work remotely with clients and teams anywhere."
+    },
+    {
+      "question": "Are you available for new work?",
+      "answer": "I'm available for select web and applied AI projects. The contact form below is the fastest way to start."
+    },
+    {
+      "question": "What technologies do you work with?",
+      "answer": "Day to day I work with Astro, Django, FastAPI, PyTorch, and Docker, across Python and JavaScript."
+    }
+  ]
 }

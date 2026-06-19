@@ -2,8 +2,28 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "../data/portfolio.json";
 
-const { profile, featured, experiments, research, skills } = data;
+const { profile, featured, experiments, research, skills, faq } = data;
 const web3formsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
+const lastUpdated = new Date();
+const buildTimeZone = "America/Vancouver";
+const lastUpdatedISO = lastUpdated.toLocaleDateString("en-CA", {
+  timeZone: buildTimeZone,
+});
+const lastUpdatedLabel = lastUpdated.toLocaleDateString("en-US", {
+  timeZone: buildTimeZone,
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
 const orbitPositions = [
   "orbit-card--one",
   "orbit-card--two",
@@ -86,7 +106,21 @@ const orbitPositions = [
               aria-label={`Open ${project.title}`}
             >
               <span class="orbit-card__visual">
-                <span class="orbit-card__mark">{project.mark}</span>
+                {project.showcaseVideo ? (
+                  <video
+                    class="orbit-card__video"
+                    src={project.showcaseVideo}
+                    poster={project.showcasePoster}
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-hidden="true"
+                  ></video>
+                ) : (
+                  <span class="orbit-card__mark">{project.mark}</span>
+                )}
                 <span class="orbit-card__rings"></span>
               </span>
               <span class="orbit-card__name">{project.title}</span>
@@ -135,29 +169,58 @@ const orbitPositions = [
 
       <div class="project-grid">
         {
-          featured.map((project, index) => (
-            <article class="project-card" data-category={project.category} style={`--accent:${project.accent}`}>
-              <button type="button" data-project={project.id} aria-label={`Read about ${project.title}`}>
+          featured.map((project, index) => {
+            const CardControl = project.websiteUrl ? "a" : "button";
+
+            return (
+              <article class="project-card" data-category={project.category} style={`--accent:${project.accent}`}>
+                <CardControl
+                  href={project.websiteUrl}
+                  target={project.websiteUrl ? "_blank" : undefined}
+                  rel={project.websiteUrl ? "noreferrer" : undefined}
+                  type={project.websiteUrl ? undefined : "button"}
+                  data-project={project.websiteUrl ? undefined : project.id}
+                  aria-label={project.websiteUrl ? `Visit ${project.title}` : `Read about ${project.title}`}
+                >
                 <div class="project-card__topline">
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <span>{project.eyebrow}</span>
                 </div>
                 <div class="project-card__art" aria-hidden="true">
-                  <span class="project-card__mark">{project.mark}</span>
-                  <span class="art-axis art-axis--x"></span>
-                  <span class="art-axis art-axis--y"></span>
-                  <span class="art-dot art-dot--a"></span>
-                  <span class="art-dot art-dot--b"></span>
+                  {project.showcaseVideo ? (
+                    <>
+                      <video
+                        class="project-card__video"
+                        src={project.showcaseVideo}
+                        poster={project.showcasePoster}
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata"
+                      ></video>
+                      <span class="project-card__reel-label">MAIN SITE → HIDDEN ARCHIVE</span>
+                    </>
+                  ) : (
+                    <>
+                      <span class="project-card__mark">{project.mark}</span>
+                      <span class="art-axis art-axis--x"></span>
+                      <span class="art-axis art-axis--y"></span>
+                      <span class="art-dot art-dot--a"></span>
+                      <span class="art-dot art-dot--b"></span>
+                    </>
+                  )}
                   <span class="art-caption">{project.type}</span>
                 </div>
                 <div class="project-card__copy">
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
-                  <span class="open-label">OPEN CASE NOTE <i>↗</i></span>
+                  <span class="open-label">{project.websiteUrl ? "VISIT WEBSITE" : "OPEN CASE NOTE"} <i>↗</i></span>
                 </div>
-              </button>
-            </article>
-          ))
+                </CardControl>
+              </article>
+            );
+          })
         }
       </div>
     </section>
@@ -250,9 +313,25 @@ const orbitPositions = [
       </div>
     </section>
 
+    <section class="section faq-section" id="faq">
+      <div class="faq-statement">
+        <span class="section-number">05 / COMMON QUESTIONS</span>
+        <p>The things people usually <em>ask first.</em></p>
+      </div>
+      <dl class="faq-list">
+        {faq.map((item) => (
+          <div class="faq-item">
+            <dt>{item.question}</dt>
+            <dd>{item.answer}</dd>
+          </div>
+        ))}
+      </dl>
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    </section>
+
     <section class="contact-section" id="contact">
       <span class="contact-orbit" aria-hidden="true"></span>
-      <span class="section-number">05 / CONTACT</span>
+      <span class="section-number">06 / CONTACT</span>
       <p>Have an unruly website, an applied AI idea, or a system that needs a clearer shape?</p>
       <a class="contact-link" href="#contact-form">Let’s make it useful.<span>↗</span></a>
       <form
@@ -264,19 +343,19 @@ const orbitPositions = [
         <input type="hidden" name="access_key" value={web3formsAccessKey} />
         <input type="hidden" name="subject" value="New portfolio contact request" />
         <input type="hidden" name="from_name" value="Mahatav Portfolio" />
-        <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+        <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-        <label>
+        <label for="contact-name">
           <span>Name</span>
-          <input type="text" name="name" placeholder="Your name" required />
+          <input id="contact-name" type="text" name="name" placeholder="Your name" required />
         </label>
-        <label>
+        <label for="contact-email">
           <span>Email</span>
-          <input type="email" name="email" placeholder="you@example.com" required />
+          <input id="contact-email" type="email" name="email" placeholder="you@example.com" required />
         </label>
-        <label class="contact-form__full">
+        <label class="contact-form__full" for="contact-message">
           <span>Message</span>
-          <textarea name="message" rows="5" placeholder="Tell me what you're building." required></textarea>
+          <textarea id="contact-message" name="message" rows="5" placeholder="Tell me what you're building." required></textarea>
         </label>
         <button type="submit">Send Message <span>↗</span></button>
       </form>
@@ -285,9 +364,10 @@ const orbitPositions = [
         <div>
           <a href={profile.github} target="_blank">GitHub ↗</a>
           <a href={profile.linkedin} target="_blank">LinkedIn ↗</a>
+          <a href={profile.instagram} target="_blank">Instagram ↗</a>
           <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">Resume ↗</a>
         </div>
-        <span>© {new Date().getFullYear()}</span>
+        <span>Updated <time datetime={lastUpdatedISO}>{lastUpdatedLabel}</time> · © {new Date().getFullYear()}</span>
       </div>
     </section>
   </main>
@@ -310,6 +390,11 @@ const orbitPositions = [
       description: string;
       highlights: string[];
       stack: string[];
+      services?: string[];
+      proof?: string[];
+      showcaseVideo?: string;
+      showcasePoster?: string;
+      websiteUrl?: string;
       githubUrl?: string;
     }
 
@@ -342,30 +427,80 @@ const orbitPositions = [
         if (!project || !dialog || !dialogContent) return;
         dialogContent.style.setProperty("--accent", project.accent);
         dialogContent.innerHTML = `
-          <div class="dialog-visual" style="--accent:${project.accent}">
-            <span class="dialog-mark">${project.mark}</span>
-            <i></i><i></i><i></i>
+          <div class="dialog-visual ${project.showcaseVideo ? "dialog-visual--showcase" : ""}" style="--accent:${project.accent}">
+            ${project.showcaseVideo ? `
+              <img
+                class="dialog-showcase-backdrop"
+                src="${project.showcasePoster ?? ""}"
+                alt=""
+                aria-hidden="true"
+              />
+              <video
+                class="dialog-showcase-video"
+                src="${project.showcaseVideo}"
+                poster="${project.showcasePoster ?? ""}"
+                muted
+                autoplay
+                loop
+                playsinline
+                preload="auto"
+              ></video>
+              <span class="dialog-reel-kicker">LIVE BUILD / MAIN SITE → ARCHIVE</span>
+            ` : `
+              <span class="dialog-mark">${project.mark}</span>
+              <i></i><i></i><i></i>
+            `}
           </div>
           <div class="dialog-copy">
             <span class="dialog-eyebrow">${project.eyebrow}</span>
             <h2>${project.title}</h2>
             <p class="dialog-summary">${project.summary}</p>
             <p class="dialog-description">${project.description}</p>
+            ${project.proof ? `
+              <div class="dialog-proof">
+                ${project.proof.map((item) => `<span>${item}</span>`).join("")}
+              </div>
+            ` : ""}
             <div class="dialog-highlights">
               ${project.highlights.map((item, index) => `<span><i>0${index + 1}</i>${item}</span>`).join("")}
             </div>
-            ${project.githubUrl ? `
+            ${project.services ? `
+              <div class="dialog-services">
+                <small>WHAT I DELIVERED</small>
+                <div>${project.services.map((item) => `<span>${item}</span>`).join("")}</div>
+              </div>
+            ` : ""}
+            ${project.websiteUrl || project.githubUrl ? `
               <div class="dialog-actions">
-                <a href="${project.githubUrl}" target="_blank" rel="noreferrer">
-                  <span>VIEW SOURCE</span>
-                  <i>GITHUB ↗</i>
+                ${project.websiteUrl ? `
+                  <a class="dialog-action--primary" href="${project.websiteUrl}" target="_blank" rel="noreferrer">
+                    <span>EXPLORE THE LIVE BUILD</span>
+                    <i>VISIT SITE ↗</i>
+                  </a>
+                ` : ""}
+                ${project.githubUrl ? `
+                  <a href="${project.githubUrl}" target="_blank" rel="noreferrer">
+                    <span>INSPECT THE SOURCE</span>
+                    <i>GITHUB ↗</i>
+                  </a>
+                ` : ""}
+                <a href="#contact-form" data-book-project>
+                  <span>HAVE A PROJECT IN MIND?</span>
+                  <i>BOOK MAHATAV ↗</i>
                 </a>
               </div>
             ` : ""}
             <div class="dialog-stack">${project.stack.map((item) => `<span>${item}</span>`).join("")}</div>
           </div>
         `;
+        dialogContent.querySelector("[data-book-project]")?.addEventListener("click", (event) => {
+          event.preventDefault();
+          dialog.close();
+          document.body.classList.remove("dialog-open");
+          document.querySelector("#contact-form")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
         dialog.showModal();
+        dialog.scrollTop = 0;
         document.body.classList.add("dialog-open");
       });
     });
@@ -413,7 +548,7 @@ const orbitPositions = [
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll(".project-card, .experiment-row, .research-card, .about-grid").forEach((element) => {
+    document.querySelectorAll(".project-card, .experiment-row, .research-card, .about-grid, .faq-list").forEach((element) => {
       revealObserver.observe(element);
     });
   </script>

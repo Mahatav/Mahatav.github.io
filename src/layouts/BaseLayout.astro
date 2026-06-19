@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import data from "../data/portfolio.json";
 
 interface Props {
   title: string;
@@ -8,6 +9,50 @@ interface Props {
 
 const { title, description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = new URL("og-image.png", Astro.site);
+
+const { profile, skills } = data;
+const siteUrl = Astro.site?.toString() ?? "";
+const personId = `${siteUrl}#person`;
+const buildDate = new Date().toLocaleDateString("en-CA", {
+  timeZone: "America/Vancouver",
+});
+const personSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}#profilepage`,
+      url: siteUrl,
+      name: `${profile.name} — Portfolio`,
+      datePublished: "2026-06-18",
+      dateModified: buildDate,
+      mainEntity: { "@id": personId },
+      about: { "@id": personId },
+    },
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: profile.name,
+      jobTitle: profile.role,
+      description: profile.intro,
+      url: siteUrl,
+      email: `mailto:${profile.email}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kelowna",
+        addressRegion: "BC",
+        addressCountry: "CA",
+      },
+      knowsAbout: [
+        ...skills.languages,
+        ...skills.platforms,
+        ...skills.data,
+      ],
+      sameAs: [profile.github, profile.linkedin, profile.instagram],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -15,15 +60,35 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <script is:inline>
+      // Clickjacking mitigation: break out if framed by another site.
+      // GitHub Pages can't send X-Frame-Options, so this runs client-side.
+      try {
+        if (window.top !== window.self) {
+          window.top.location = window.self.location.href;
+        }
+      } catch (e) {
+        // Cross-origin parent blocks access — that itself signals framing.
+        document.documentElement.style.display = "none";
+      }
+    </script>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#9cafaa" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${profile.name} — ${profile.role}`} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
   </head>
   <body>
     <slot />
