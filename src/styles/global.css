@@ -268,6 +268,10 @@ a {
   color: rgba(17, 23, 22, 0.62);
 }
 
+.hero h1 {
+  font-size: clamp(46px, 5.4vw, 84px);
+}
+
 .hero-intro {
   max-width: 510px;
   margin: 24px auto 0;
@@ -319,13 +323,13 @@ a {
 .signal-sculpture {
   position: absolute;
   left: 50%;
-  top: 32%;
-  width: min(560px, 55vw);
+  top: 59svh;
+  width: min(690px, 64vw, 66svh);
   aspect-ratio: 1;
-  transform: translate(-50%, -9%);
+  transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
-  animation: rise-in 1s 0.25s both;
+  animation: sculpture-rise 1s 0.25s both;
 }
 
 .halo {
@@ -363,7 +367,7 @@ a {
 
 .signal-disc {
   position: relative;
-  width: 62%;
+  width: 59%;
   aspect-ratio: .72;
   overflow: hidden;
   display: grid;
@@ -374,8 +378,8 @@ a {
     radial-gradient(circle at 65% 34%, #647c74, transparent 18%),
     linear-gradient(155deg, #16211f, #42564f 45%, #0b100f 46%, #17221f);
   border-radius: 48% 48% 18% 18% / 38% 38% 12% 12%;
-  box-shadow: 0 45px 80px rgba(17,23,22,.32), inset 0 0 0 1px rgba(255,255,255,.12);
-  transform: perspective(700px) rotateY(-8deg) rotateX(3deg);
+  box-shadow: 0 50px 90px rgba(17,23,22,.36), inset 0 0 0 1px rgba(255,255,255,.12);
+  transform: perspective(700px) rotateY(-5deg) rotateX(2deg);
 }
 
 .signal-disc::before {
@@ -404,6 +408,22 @@ a {
   text-shadow: 11px 8px 0 rgba(214,255,97,.12);
 }
 
+.signal-disc__photo {
+  position: absolute;
+  z-index: 2;
+  top: calc(2% + 2em);
+  left: calc(52% - 0.5em);
+  width: 114%;
+  height: 150%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  object-position: top center;
+  filter:
+    saturate(.9)
+    contrast(1.06)
+    drop-shadow(0 16px 24px rgba(17,23,22,.46));
+}
+
 .scanline {
   position: absolute;
   z-index: 3;
@@ -422,6 +442,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: 4;
+  transform: translate(0, 0);
   pointer-events: none;
 }
 
@@ -444,8 +465,8 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 99px;
-  height: 99px;
+  width: 98px;
+  height: 98px;
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
@@ -458,7 +479,7 @@ a {
 
 .satellite b {
   display: block;
-  font: 700 14px/1 var(--mono);
+  font: 700 12px/1 var(--mono);
   letter-spacing: .04em;
   animation: orbit var(--dur, 26s) linear infinite reverse;
   animation-delay: var(--d, 0s);
@@ -474,7 +495,7 @@ a {
 
 /* Longer area labels need a tighter fit than the short WEB/AI/DATA badges. */
 .satellite--area b {
-  font-size: 10.5px;
+  font-size: 9px;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -570,20 +591,21 @@ a {
    the eye. --one (Skinny Bob) is the 3x hero; video builds 2.5x; marks 2x. */
 /* Scattered, not columned. Size = importance: Skinny Bob (lead) biggest,
    OKGN booking second, TA third, GCRTC + GPT-2 smallest. */
-.orbit-card--one { left: 1.5vw; top: 17%; width: 300px; animation-delay: .35s; }
-.orbit-card--five { left: 11vw; top: 60%; width: 235px; animation-delay: .75s; }
-.orbit-card--two { right: 4vw; top: 18%; width: 200px; animation-delay: .45s; }
-.orbit-card--three { right: 1.5vw; top: 50%; width: 162px; animation-delay: .55s; }
-.orbit-card--four { right: 14vw; top: 44%; width: 150px; animation-delay: .65s; }
+.orbit-card--one { left: 1vw; top: 18%; width: 244px; animation-delay: .35s; }
+.orbit-card--five { left: 2vw; top: 61%; width: 186px; animation-delay: .75s; }
+.orbit-card--two { right: 1.5vw; top: 19%; width: 166px; animation-delay: .45s; }
+.orbit-card--three { right: 1.5vw; top: 55%; width: 134px; animation-delay: .55s; }
+.orbit-card--four { right: 13vw; top: 42%; width: 122px; animation-delay: .65s; }
 
 .hero-console {
   position: absolute;
   z-index: 20;
-  left: 50%;
-  bottom: 8vh;
-  width: min(630px, calc(100% - 34px));
+  left: 0;
+  right: 0;
+  bottom: 7vh;
+  width: min(540px, calc(100% - 34px));
+  margin: 0 auto;
   padding: 20px;
-  transform: translateX(-50%);
   color: var(--paper);
   background: rgba(45, 53, 51, .94);
   border-radius: 11px;
@@ -1785,6 +1807,11 @@ a {
   to { opacity: 1; transform: translate(-50%, 0); }
 }
 
+@keyframes sculpture-rise {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 25px)); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
 .orbit-card,
 .hero-console {
   animation-name: simple-rise;
@@ -1811,18 +1838,18 @@ a {
   }
 
   .signal-sculpture {
-    top: 420px;
-    width: min(520px, 82vw);
-    transform: translateX(-50%);
+    top: 500px;
+    width: min(660px, 96vw);
+    transform: translate(-50%, -50%);
   }
 
   .satellite {
-    width: 78px;
-    height: 78px;
+    width: 68px;
+    height: 68px;
   }
 
-  .satellite b { font-size: 12px; }
-  .satellite--area b { font-size: 9px; }
+  .satellite b { font-size: 10px; }
+  .satellite--area b { font-size: 7.5px; }
 
   .orbit-field {
     position: absolute;
@@ -1902,8 +1929,8 @@ a {
   }
 
   .signal-sculpture {
-    top: 410px;
-    width: 94vw;
+    top: 445px;
+    width: min(450px, 106vw);
   }
 
   .orbit-field {

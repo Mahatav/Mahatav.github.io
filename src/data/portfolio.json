@@ -2,14 +2,14 @@
   "profile": {
     "name": "Mahatav Arora",
     "shortName": "MA",
-    "role": "Custom websites & online tools for businesses",
-    "intro": "I build websites and online tools that help your business look professional, get found on Google, and turn visitors into customers. I handle the whole thing, from our first chat to launch, and explain every step in plain English, no tech-speak required.",
+    "role": "Freelance web developer and designer",
+    "intro": "I'm a freelance web developer who builds websites and online tools that help businesses look credible, get found on Google, and win more customers. I manage each project from the first conversation through to launch, keep the process clear and jargon-free, and deliver work that's reliable from day one and easy to build on.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
     "instagram": "https://www.instagram.com/mahatav.arora/",
-    "availability": "Taking on new website projects, from first chat to launch, no jargon."
+    "availability": "Currently booking new website projects. Clear timelines, steady communication, and no jargon."
   },
   "featured": [
     {
@@ -19,8 +19,8 @@
       "category": "web",
       "mark": "SB",
       "accent": "#ff7256",
-      "summary": "A bold, cinematic website that turns a creator's archive into an experience their fans can explore.",
-      "description": "I shaped the whole look and feel, built the entire website, and organized a large library of content, then added a few hidden surprises for fans to discover. Taken from a first idea all the way to launch.",
+      "summary": "A bold, cinematic website that turns a creator's archive into an immersive experience for their audience.",
+      "description": "I led this build from concept to launch: the visual direction, the full website, and a large, well-organized content library, along with a few hidden features for fans to discover.",
       "stack": ["Astro", "CSS", "JavaScript", "Canvas", "Rive", "Node.js", "Docker", "Nginx"],
       "highlights": ["Look and feel built from scratch", "21 public stories + a hidden archive", "Secure private file uploads"],
       "services": ["Look and feel", "Easy-to-use design", "Full website build", "Launch and hosting"],
@@ -36,8 +36,8 @@
       "category": "systems",
       "mark": "TA",
       "accent": "#c8b8ff",
-      "summary": "A hiring tool that reads résumés automatically and helps the team find the right candidates fast.",
-      "description": "I built a system that scans applicants' résumés, pulls out their real skills, and lets the hiring team filter and sort candidates in seconds instead of hours, turning a slow, manual job into a few clicks.",
+      "summary": "A hiring tool that reads résumés automatically and helps the team shortlist the right candidates fast.",
+      "description": "I built a tool that scans applicant résumés, identifies each candidate's real skills, and lets the hiring team filter and shortlist in seconds instead of hours.",
       "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
       "highlights": ["Reads skills straight from résumés", "Powerful candidate filters", "Built to handle big volumes"],
       "githubUrl": "https://github.com/UBCO-COSC499-S2025/team-11-capstone-team-11",
@@ -50,8 +50,8 @@
       "category": "web",
       "mark": "GC",
       "accent": "#a9e5d6",
-      "summary": "A full website rebuild for a university research centre, easy to update and easy to search.",
-      "description": "I redesigned and rebuilt the centre's website so their staff can publish research, events, and team updates themselves, without needing a developer. I also added a custom search and fixed their contact forms.",
+      "summary": "A complete website rebuild for a university research centre, easy to update and easy to search.",
+      "description": "I redesigned and rebuilt the centre's website so their team can publish research, events, and updates themselves, without a developer. I also added a custom search and rebuilt their contact forms.",
       "stack": ["WordPress", "PHP", "JavaScript", "Custom search", "SEO"],
       "highlights": ["Custom site search", "Staff can post their own updates", "Contact forms that actually work"],
       "showcaseVideo": "/media/gcrtc-showcase.mp4",
@@ -68,7 +68,7 @@
       "mark": "G2",
       "accent": "#ffd6a3",
       "summary": "I built my own version of the kind of AI that powers tools like ChatGPT, from the ground up.",
-      "description": "A from-scratch build of a language model, the technology behind today's AI chat tools. I wrote and tested every piece myself to truly understand how it works, so I can put AI to practical use in real projects.",
+      "description": "A from-scratch build of a language model, the technology behind today's AI tools. I wrote and tested every part myself, so I can apply AI to client work thoughtfully and with real understanding.",
       "stack": ["Python", "PyTorch", "NumPy", "Transformers", "BPE"],
       "highlights": ["Built and trained from scratch", "Over 100 tests", "Writes its own text"],
       "githubUrl": "https://github.com/Mahatav/GPT-2_Scratch",
@@ -83,8 +83,8 @@
       "category": "web",
       "mark": "OK",
       "accent": "#d6ff61",
-      "summary": "A faster, clearer boat-rental website with easy online booking, built for the busy season.",
-      "description": "I rebuilt the whole website and added a simple step-by-step booking system: pick a date and time, choose a boat, add your details, done. Built to handle the summer rush, get found locally, and keep spam out.",
+      "summary": "A faster, clearer boat-rental website with simple online booking, built for the busy season.",
+      "description": "I rebuilt the entire website and added a straightforward booking system: choose a date and time, pick a boat, enter your details, and you're set. Built to handle peak-season traffic, rank locally, and keep spam out.",
       "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
       "highlights": ["Easy online booking", "Easier to find on Google", "Works great on phones"],
       "showcaseVideo": "/media/okgn-showcase.mp4",
@@ -100,7 +100,7 @@
       "title": "Self-Flying Drone That Follows People",
       "year": "2024",
       "category": "vision",
-      "summary": "A drone that spots a person and flies itself to follow them, on its own, in real time.",
+      "summary": "A drone that detects a person and flies itself to follow them, autonomously and in real time.",
       "stack": ["Python", "YOLOv8", "OpenCV", "djitellopy"]
     },
     {
@@ -108,7 +108,7 @@
       "title": "Camera Robot That Chases a Target",
       "year": "2024",
       "category": "vision",
-      "summary": "A little robot with a camera that locks onto a target and chases it around the room.",
+      "summary": "A camera-equipped robot that locks onto a target and tracks it as it moves around the room.",
       "stack": ["PyTorch", "OpenCV", "ESP32-CAM", "Arduino"]
     },
     {
@@ -116,7 +116,7 @@
       "title": "Drone That Lands Itself",
       "year": "2023",
       "category": "vision",
-      "summary": "A drone that finds its own landing pad and touches down by itself, no pilot needed.",
+      "summary": "A drone that locates its own landing pad and touches down without a pilot.",
       "stack": ["Python", "OpenCV", "DroneKit", "Tesseract"]
     },
     {
@@ -124,7 +124,7 @@
       "title": "Banking Identity Checks",
       "year": "2024",
       "category": "ai",
-      "summary": "Experiments in identity verification, spotting faces and confirming they're really there, the way banking apps do.",
+      "summary": "Identity-verification experiments that detect faces and confirm a real person is present, the way banking apps do.",
       "stack": ["YOLOv8", "dlib", "OpenCV", "Python"]
     }
   ],
@@ -133,7 +133,7 @@
       "title": "How AI Picks Up Bias",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Studied how AI takes on bias depending on what it's trained on, by training two models on very different philosophy texts and comparing how they 'think.'",
+      "summary": "A study of how AI absorbs bias from its training data, comparing two models trained on very different philosophical texts.",
       "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"],
       "paperTitle": "Corpus-Conditioned Bias: Training GPT-2 Models on Eastern and Western Philosophical Texts",
       "paperPath": "research/Corpus_Conditioned_Bias.pdf",
@@ -143,7 +143,7 @@
       "title": "Spotting Human vs. AI Code",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "Built a tool that can tell whether computer code was written by a person or by AI, and used it to study how students' work is changing.",
+      "summary": "A tool that determines whether code was written by a person or by AI, used to study how student work is changing.",
       "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"],
       "paperTitle": "Pre-Post AI Comparisons: Behavioural Changes in Student Capstone Projects",
       "paperPath": "research/Pre_Post_AI_Comparisons.pdf",
@@ -153,14 +153,14 @@
       "title": "How Software Teams Work",
       "period": "Sep 2025–Apr 2026",
       "code": "COSC 447",
-      "summary": "Built a tool that analyzes how software teams actually work together, turning their day-to-day activity into clear, visual patterns.",
+      "summary": "A tool that analyzes how software teams collaborate, turning their day-to-day activity into clear, visual patterns.",
       "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
     },
     {
       "title": "Reading Jersey Numbers on TV",
       "period": "2026",
       "code": "COMPUTER VISION",
-      "summary": "Built a system that reads players' jersey numbers from broadcast soccer footage, even when the video is blurry or far away.",
+      "summary": "A system that reads players' jersey numbers from broadcast soccer footage, even when the video is blurry or distant.",
       "tags": ["SoccerNet", "YOLOv8 Pose", "PARSeq", "Vision-language models"],
       "paperTitle": "Jersey Number Recognition in Broadcast Soccer Video",
       "paperPath": "research/Jersey_Number_Recognition.pdf",
@@ -174,12 +174,12 @@
     "tools": ["Git", "Google Analytics", "Search Console", "MySQL", "SEO", "Figma"]
   },
   "packages": {
-    "intro": "Simple, clear options based on what your business actually needs. Every website is built to be found on Google and ready to grow with you. I'll give you a price after a quick, no-pressure chat about your project.",
+    "intro": "Clear options shaped around what your business needs. Every website is built to be found on Google and ready to grow with you. After a short, no-pressure conversation, I'll prepare a quote tailored to your project.",
     "tiers": [
       {
         "name": "Starter",
         "scope": "Website builder",
-        "blurb": "A clean, tidy site built on a website builder you can choose, Squarespace, WordPress, Wix, or similar. No custom design, just a fast and professional way to get your business online.",
+        "blurb": "A clean, professional site built on the website builder of your choice, whether that's Squarespace, WordPress, or Wix. No custom design, just a fast, polished way to get your business online.",
         "price": "Custom quote",
         "features": [
           "Set up on any website builder",
@@ -192,7 +192,7 @@
       {
         "name": "Professional",
         "scope": "Custom-designed site",
-        "blurb": "A one-of-a-kind website designed around your brand and built to turn visitors into customers. No templates, made just for you.",
+        "blurb": "A custom website designed around your brand and built to turn visitors into customers. Designed and developed from scratch, never from a template.",
         "price": "Custom quote",
         "featured": true,
         "features": [
@@ -207,7 +207,7 @@
       {
         "name": "Performance",
         "scope": "Custom visuals + features",
-        "blurb": "Eye-catching custom visuals, animation, and interactive features, plus smart tools and automation when your business needs them. For brands that want to truly stand out.",
+        "blurb": "Custom visuals, animation, and interactive features, plus bespoke tools and automation when your business needs them. Built for brands that want to stand out and scale.",
         "price": "Custom quote",
         "features": [
           "Everything in Professional",
@@ -221,7 +221,7 @@
     ],
     "seo": {
       "label": "GETTING FOUND ON GOOGLE",
-      "summary": "Showing up on Google is built into everything I make, and I can also improve it on its own, whether I built your site or not.",
+      "summary": "Strong search visibility is built into everything I make, and I also offer it on its own, whether I built your site or not.",
       "items": [
         "Find and fix what's hurting your ranking",
         "Make your site load faster",
@@ -235,19 +235,19 @@
   "faq": [
     {
       "question": "What kind of work do you take on?",
-      "answer": "Websites and online tools for businesses, from a simple, polished site to a custom build with online booking, customer logins, or smart automation. If it lives online, I can build it."
+      "answer": "Websites and online tools for businesses, from a clean, polished site to a custom build with online booking, customer accounts, or smart automation. If it lives online, I can build it."
     },
     {
       "question": "Do I need to understand the tech?",
-      "answer": "Not at all, that's my job. I handle the technical side and explain things in plain English, so you can focus on running your business."
+      "answer": "Not at all, that's my job. I handle the technical side and explain everything in plain English, so you can stay focused on running your business."
     },
     {
       "question": "Where are you based, and do you work remotely?",
-      "answer": "I'm based in Kelowna, BC, and I work with clients anywhere. Everything can be done remotely, on your schedule."
+      "answer": "I'm based in Kelowna, BC, and work with clients anywhere. Everything can be handled remotely, on a schedule that suits you."
     },
     {
       "question": "Are you available for new work?",
-      "answer": "Yes, I'm taking on new projects, and I'm reliable about timelines and keeping you in the loop. The contact form below is the fastest way to start."
+      "answer": "Yes. I'm currently booking new projects, and I'm reliable with timelines and communication throughout. The contact form below is the fastest way to start."
     }
   ]
 }
