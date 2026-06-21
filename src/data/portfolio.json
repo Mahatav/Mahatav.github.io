@@ -2,14 +2,14 @@
   "profile": {
     "name": "Mahatav Arora",
     "shortName": "MA",
-    "role": "Freelance web developer and designer",
-    "intro": "I'm a freelance web developer who builds websites and online tools that help businesses look credible, get found on Google, and win more customers. I manage each project from the first conversation through to launch, keep the process clear and jargon-free, and deliver work that's reliable from day one and easy to build on.",
+    "role": "Freelance software developer, AI engineer, and designer",
+    "intro": "I'm a freelance developer who builds software, AI tools, and websites that help businesses work smarter, look credible, and win more customers. I manage each project from the first conversation through to launch, keep the process clear and jargon-free, and deliver work that's reliable from day one and easy to build on.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
     "instagram": "https://www.instagram.com/mahatav.arora/",
-    "availability": "Currently booking new website projects. Clear timelines, steady communication, and no jargon."
+    "availability": "Currently booking new software, AI, and web projects. Clear timelines, steady communication, and no jargon."
   },
   "featured": [
     {
@@ -174,47 +174,47 @@
     "tools": ["Git", "Google Analytics", "Search Console", "MySQL", "SEO", "Figma"]
   },
   "packages": {
-    "intro": "Clear options shaped around what your business needs. Every website is built to be found on Google and ready to grow with you. After a short, no-pressure conversation, I'll prepare a quote tailored to your project.",
+    "intro": "Clear options shaped around what your business needs, from websites to custom software, AI, and automation. Ranges are a starting point for the Kelowna market; after a short, no-pressure conversation, I'll prepare a quote tailored to your project.",
     "tiers": [
       {
-        "name": "Starter",
-        "scope": "Website builder",
-        "blurb": "A clean, professional site built on the website builder of your choice, whether that's Squarespace, WordPress, or Wix. No custom design, just a fast, polished way to get your business online.",
-        "price": "Custom quote",
+        "name": "Websites",
+        "scope": "Marketing sites, booking & SEO",
+        "blurb": "A fast, professional website that makes your business look credible and gets found on Google, from a clean builder setup to a custom marketing site with online booking.",
+        "price": "$1,500 – $3,500 CAD",
         "features": [
-          "Set up on any website builder",
+          "Built on your platform or from scratch",
           "Styled to match your brand",
           "Looks great on phones and tablets",
-          "Set up to show on Google",
-          "Contact form, then it's yours"
-        ]
-      },
-      {
-        "name": "Professional",
-        "scope": "Custom-designed site",
-        "blurb": "A custom website designed around your brand and built to turn visitors into customers. Designed and developed from scratch, never from a template.",
-        "price": "Custom quote",
-        "featured": true,
-        "features": [
-          "A custom design, made just for you",
-          "Looks perfect on every screen",
-          "Easy to update yourself, no code",
           "Built to load fast and rank on Google",
-          "See how visitors find and use your site",
           "Online booking or contact forms"
         ]
       },
       {
-        "name": "Performance",
-        "scope": "Custom visuals + features",
-        "blurb": "Custom visuals, animation, and interactive features, plus bespoke tools and automation when your business needs them. Built for brands that want to stand out and scale.",
-        "price": "Custom quote",
+        "name": "Web Apps & Tools",
+        "scope": "Custom apps, dashboards & integrations",
+        "blurb": "Custom web applications and internal tools built from scratch, dashboards, customer portals, booking systems, and integrations that streamline how your business runs.",
+        "price": "$6,000 – $15,000 CAD",
+        "featured": true,
         "features": [
-          "Everything in Professional",
-          "Custom graphics and illustrations",
-          "Animation and interactive features",
-          "Custom tools built around your business",
-          "Smart, AI-powered features",
+          "Custom-built, never templated",
+          "Dashboards, portals, and admin tools",
+          "Secure logins and user accounts",
+          "Connects to your existing systems",
+          "Built to scale with your business",
+          "Online booking, payments, or forms"
+        ]
+      },
+      {
+        "name": "Software & AI Systems",
+        "scope": "AI features, automation & custom software",
+        "blurb": "Bespoke software, AI features, and automation for businesses that want something genuinely custom, from intelligent tools and workflow automation to full systems built around how you work.",
+        "price": "$15,000+ CAD",
+        "features": [
+          "Everything in Web Apps & Tools",
+          "Custom AI and smart features",
+          "Workflow and process automation",
+          "Software built around your business",
+          "Data pipelines and integrations",
           "Ongoing support as you grow"
         ]
       }
@@ -235,7 +235,7 @@
   "faq": [
     {
       "question": "What kind of work do you take on?",
-      "answer": "Websites and online tools for businesses, from a clean, polished site to a custom build with online booking, customer accounts, or smart automation. If it lives online, I can build it."
+      "answer": "Software, AI, and web work for businesses, from a polished marketing site to custom web apps, automation, and AI-powered tools. If it runs on a screen or a server, I can build it."
     },
     {
       "question": "Do I need to understand the tech?",
