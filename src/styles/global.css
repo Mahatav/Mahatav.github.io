@@ -135,8 +135,9 @@ a {
   align-items: center;
   gap: 9px;
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.09em;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
 
 .dot-grid {
@@ -1903,7 +1904,7 @@ a {
   }
 
   .wordmark {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .contact-button {
