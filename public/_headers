@@ -1,0 +1,12 @@
+# Security response headers.
+#
+# NOTE: GitHub Pages ignores this file — it cannot send custom response headers.
+# These apply automatically when the site is served by a header-capable host
+# (Cloudflare Pages, Netlify) or proxied through Cloudflare. See README/notes.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'

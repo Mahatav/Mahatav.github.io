@@ -17,7 +17,7 @@ const { profile, featured } = data;
 
 <BaseLayout
   title={`${profile.name} · Software, AI & Web Developer in Kelowna, BC`}
-  description="Mahatav Arora builds custom software, AI tools, and websites that help businesses work smarter, look professional, and win more customers. Available for new projects in Kelowna and remotely."
+  description="Mahatav Arora builds custom software, AI tools, and websites for businesses in Kelowna, BC and remotely. Available for new projects — let's build something."
 >
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-orb" aria-hidden="true"></div>
@@ -216,6 +216,23 @@ const { profile, featured } = data;
 
     document.querySelectorAll(".project-card, .experiment-row, .research-card, .package-card, .about-grid, .faq-list").forEach((element) => {
       revealObserver.observe(element);
+    });
+
+    // Only play showcase videos while they're on screen — keeps multiple videos
+    // from decoding at once and blocking the main thread on load.
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target as HTMLVideoElement;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll<HTMLVideoElement>(".orbit-card__video, .project-card__video").forEach((video) => {
+      videoObserver.observe(video);
     });
   </script>
 </BaseLayout>

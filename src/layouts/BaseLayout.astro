@@ -70,6 +70,7 @@ const personSchema = {
       description: profile.intro,
       url: siteUrl,
       email: `mailto:${profile.email}`,
+      telephone: profile.phone,
       address,
       knowsAbout: [
         ...skills.languages,
@@ -85,6 +86,7 @@ const personSchema = {
       description: profile.intro,
       url: siteUrl,
       email: `mailto:${profile.email}`,
+      telephone: profile.phone,
       image: ogImageUrl.href,
       priceRange: "$$$",
       address,
@@ -137,6 +139,7 @@ const personSchema = {
       }
     </script>
     <meta name="description" content={description} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="author" content={profile.name} />
     <meta
       name="robots"

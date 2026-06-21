@@ -31,7 +31,7 @@ const lastUpdatedLabel = lastUpdated.toLocaleDateString("en-US", {
     <input type="hidden" name="access_key" value={web3formsAccessKey} />
     <input type="hidden" name="subject" value="New portfolio contact request" />
     <input type="hidden" name="from_name" value="Mahatav Portfolio" />
-    <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty" />
 
     <label for="contact-name">
       <span>Name</span>
@@ -50,10 +50,10 @@ const lastUpdatedLabel = lastUpdated.toLocaleDateString("en-US", {
   <div class="contact-footer">
     <span>{profile.name} · {profile.location}</span>
     <div>
-      <a href={profile.github} target="_blank">GitHub ↗</a>
-      <a href={profile.linkedin} target="_blank">LinkedIn ↗</a>
-      <a href={profile.instagram} target="_blank">Instagram ↗</a>
-      <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank">Resume ↗</a>
+      <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href={`${import.meta.env.BASE_URL}Mahatav_Arora_Resume.pdf`} target="_blank" rel="noopener">Resume ↗</a>
     </div>
     <span>Updated <time datetime={lastUpdatedISO}>{lastUpdatedLabel}</time> · © {new Date().getFullYear()}</span>
   </div>

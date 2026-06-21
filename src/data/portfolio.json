@@ -3,9 +3,11 @@
     "name": "Mahatav Arora",
     "shortName": "MA",
     "role": "Freelance software developer, AI engineer, and designer",
-    "intro": "I'm a freelance developer who builds software, AI tools, and websites that help businesses work smarter, look credible, and win more customers. I manage each project from the first conversation through to launch, keep the process clear and jargon-free, and deliver work that's reliable from day one and easy to build on.",
+    "intro": "I'm a freelance developer in Kelowna. I build software, AI tools, and websites that help businesses work smarter and win more customers. I run each project from the first chat to launch. The process stays clear and jargon-free, and the work is built to last.",
     "location": "Kelowna, BC",
     "email": "mahatavarora@gmail.com",
+    "phone": "+1 250-681-6818",
+    "phoneHref": "tel:+12506816818",
     "github": "https://github.com/Mahatav",
     "linkedin": "https://linkedin.com/in/mahatav-arora",
     "instagram": "https://www.instagram.com/mahatav.arora/",
@@ -20,11 +22,12 @@
       "mark": "SB",
       "accent": "#ff7256",
       "summary": "A bold, cinematic website that turns a creator's archive into an immersive experience for their audience.",
-      "description": "I led this build from concept to launch: the visual direction, the full website, and a large, well-organized content library, along with a few hidden features for fans to discover.",
+      "description": "I led this build from idea to launch. That meant the visual style, the full website, and a large, well-organized content library, plus a few hidden features for fans to find.",
       "stack": ["Astro", "CSS", "JavaScript", "Canvas", "Rive", "Node.js", "Docker", "Nginx"],
       "highlights": ["Look and feel built from scratch", "21 public stories + a hidden archive", "Secure private file uploads"],
       "services": ["Look and feel", "Easy-to-use design", "Full website build", "Launch and hosting"],
       "showcaseVideo": "/media/channeling-skinny-bob-showcase.mp4",
+      "showcaseThumb": "/media/channeling-skinny-bob-thumb.mp4",
       "showcasePoster": "/media/channeling-skinny-bob-poster.jpg",
       "websiteUrl": "https://channelingskinnybob.com/",
       "type": "Client website"
@@ -37,7 +40,7 @@
       "mark": "TA",
       "accent": "#c8b8ff",
       "summary": "A hiring tool that reads résumés automatically and helps the team shortlist the right candidates fast.",
-      "description": "I built a tool that scans applicant résumés, identifies each candidate's real skills, and lets the hiring team filter and shortlist in seconds instead of hours.",
+      "description": "I built a tool that scans applicant résumés and spots each person's real skills. The hiring team can then filter and shortlist in seconds instead of hours.",
       "stack": ["Django", "MySQL", "FastAPI", "Ollama", "React", "Docker", "Nginx"],
       "highlights": ["Reads skills straight from résumés", "Powerful candidate filters", "Built to handle big volumes"],
       "githubUrl": "https://github.com/UBCO-COSC499-S2025/team-11-capstone-team-11",
@@ -55,6 +58,7 @@
       "stack": ["WordPress", "PHP", "JavaScript", "Custom search", "SEO"],
       "highlights": ["Custom site search", "Staff can post their own updates", "Contact forms that actually work"],
       "showcaseVideo": "/media/gcrtc-showcase.mp4",
+      "showcaseThumb": "/media/gcrtc-thumb.mp4",
       "showcasePoster": "/media/gcrtc-poster.jpg",
       "reelLabel": "GCRTC.UBC.CA → FULL REVAMP",
       "websiteUrl": "https://gcrtc.ubc.ca/",
@@ -74,6 +78,7 @@
       "githubUrl": "https://github.com/Mahatav/GPT-2_Scratch",
       "image": "/media/gpt2-training.jpg",
       "imageCaption": "LIVE TRAINING RUN",
+      "imageAlt": "Live training run of a GPT-2 language model built from scratch, showing the training loss decreasing over steps",
       "type": "AI build"
     },
     {
@@ -88,6 +93,7 @@
       "stack": ["Astro", "JavaScript", "PHP", "CSS", "JSON-LD", "SEO"],
       "highlights": ["Easy online booking", "Easier to find on Google", "Works great on phones"],
       "showcaseVideo": "/media/okgn-showcase.mp4",
+      "showcaseThumb": "/media/okgn-thumb.mp4",
       "showcasePoster": "/media/okgn-poster.jpg",
       "reelLabel": "LIVE SITE → BOOKING FLOW",
       "websiteUrl": "https://okgnboatrentals.ca/",
@@ -174,12 +180,12 @@
     "tools": ["Git", "Google Analytics", "Search Console", "MySQL", "SEO", "Figma"]
   },
   "packages": {
-    "intro": "Clear options shaped around what your business needs, from websites to custom software, AI, and automation. Ranges are a starting point for the Kelowna market; after a short, no-pressure conversation, I'll prepare a quote tailored to your project.",
+    "intro": "Clear options for what your business needs, from websites to custom software, AI, and automation. The prices below are starting points. After a short, no-pressure chat, I'll send you a quote made for your project.",
     "tiers": [
       {
         "name": "Websites",
         "scope": "Marketing sites, booking & SEO",
-        "blurb": "A fast, professional website that makes your business look credible and gets found on Google, from a clean builder setup to a custom marketing site with online booking.",
+        "blurb": "A fast, professional website that makes your business look credible and easy to find on Google. From a simple builder setup to a custom marketing site with online booking.",
         "price": "$1,500 – $3,500 CAD",
         "features": [
           "Built on your platform or from scratch",
@@ -192,7 +198,7 @@
       {
         "name": "Web Apps & Tools",
         "scope": "Custom apps, dashboards & integrations",
-        "blurb": "Custom web applications and internal tools built from scratch, dashboards, customer portals, booking systems, and integrations that streamline how your business runs.",
+        "blurb": "Custom web apps and tools, built from scratch. Dashboards, customer portals, booking systems, and links to the tools you already use, all to help your business run smoother.",
         "price": "$6,000 – $15,000 CAD",
         "featured": true,
         "features": [
@@ -207,7 +213,7 @@
       {
         "name": "Software & AI Systems",
         "scope": "AI features, automation & custom software",
-        "blurb": "Bespoke software, AI features, and automation for businesses that want something genuinely custom, from intelligent tools and workflow automation to full systems built around how you work.",
+        "blurb": "Custom software, AI features, and automation for businesses that want something truly their own. From smart tools to full systems built around the way you work.",
         "price": "$15,000+ CAD",
         "features": [
           "Everything in Web Apps & Tools",
@@ -221,7 +227,7 @@
     ],
     "seo": {
       "label": "GETTING FOUND ON GOOGLE",
-      "summary": "Strong search visibility is built into everything I make, and I also offer it on its own, whether I built your site or not.",
+      "summary": "Every site I build is made to rank on Google. I also offer SEO on its own, whether I built your site or not.",
       "items": [
         "Find and fix what's hurting your ranking",
         "Make your site load faster",
@@ -235,7 +241,7 @@
   "faq": [
     {
       "question": "What kind of work do you take on?",
-      "answer": "Software, AI, and web work for businesses, from a polished marketing site to custom web apps, automation, and AI-powered tools. If it runs on a screen or a server, I can build it."
+      "answer": "Software, AI, and web work for businesses. That can be a polished marketing site, a custom web app, automation, or an AI tool. If it runs on a screen or a server, I can build it."
     },
     {
       "question": "How involved do I need to be?",
@@ -247,7 +253,7 @@
     },
     {
       "question": "Are you available for new work?",
-      "answer": "Yes. I'm currently booking new projects, and I'm reliable with timelines and communication throughout. The contact form below is the fastest way to start."
+      "answer": "Yes. I'm booking new projects now. I stick to timelines and keep you posted the whole way. The contact form below is the fastest way to start."
     }
   ]
 }

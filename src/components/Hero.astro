@@ -1,7 +1,8 @@
 ---
 import data from "../data/portfolio.json";
 
-const { profile, featured } = data;
+const { profile } = data;
+const featured = data.featured as Array<Record<string, any>>;
 const orbitPositions = [
   "orbit-card--one",
   "orbit-card--two",
@@ -32,7 +33,7 @@ const orbitPositions = [
     <div class="halo halo--outer"></div>
     <div class="halo halo--inner"></div>
     <div class="signal-disc">
-      <img class="signal-disc__photo" src="/media/photo.png" alt="Mahatav Arora" />
+      <img class="signal-disc__photo" src="/media/photo.webp" alt="Mahatav Arora" width="480" height="480" fetchpriority="high" decoding="async" />
       <div class="scanline"></div>
     </div>
     <div class="electron-field" aria-hidden="true">
@@ -59,13 +60,12 @@ const orbitPositions = [
             {project.showcaseVideo ? (
               <video
                 class="orbit-card__video"
-                src={project.showcaseVideo}
+                src={project.showcaseThumb ?? project.showcaseVideo}
                 poster={project.showcasePoster}
                 muted
-                autoplay
                 loop
                 playsinline
-                preload="metadata"
+                preload="none"
                 aria-hidden="true"
               ></video>
             ) : (

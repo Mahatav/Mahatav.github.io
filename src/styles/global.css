@@ -150,6 +150,36 @@ a {
   font-size: 10px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-call {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  color: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: background .25s ease, border-color .25s ease, color .25s ease;
+}
+
+.header-call svg {
+  width: 16px;
+  height: 16px;
+}
+
+.header-call:hover,
+.header-call:focus-visible {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+
 .contact-button {
   height: 38px;
   padding: 0 12px;
@@ -1900,11 +1930,16 @@ a {
 @media (max-width: 650px) {
   .site-header {
     top: 12px;
-    grid-template-columns: 42px 1fr 42px;
+    grid-template-columns: 42px 1fr auto;
+    gap: 8px;
   }
 
   .wordmark {
     font-size: 14px;
+  }
+
+  .header-actions {
+    gap: 6px;
   }
 
   .contact-button {

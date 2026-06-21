@@ -1,7 +1,7 @@
 ---
 import data from "../data/portfolio.json";
 
-const { featured } = data;
+const featured = data.featured as Array<Record<string, any>>;
 ---
 
 <section class="section work-section" id="work">
@@ -44,19 +44,18 @@ const { featured } = data;
                 <>
                   <video
                     class="project-card__video"
-                    src={project.showcaseVideo}
+                    src={project.showcaseThumb ?? project.showcaseVideo}
                     poster={project.showcasePoster}
                     muted
-                    autoplay
                     loop
                     playsinline
-                    preload="metadata"
+                    preload="none"
                   ></video>
                   <span class="project-card__reel-label">{project.reelLabel ?? "MAIN SITE → HIDDEN ARCHIVE"}</span>
                 </>
               ) : project.image ? (
                 <>
-                  <img class="project-card__image" src={project.image} alt="" loading="lazy" decoding="async" />
+                  <img class="project-card__image" src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" decoding="async" />
                   {project.imageCaption && (
                     <span class="project-card__reel-label">{project.imageCaption}</span>
                   )}
