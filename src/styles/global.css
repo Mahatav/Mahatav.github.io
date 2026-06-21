@@ -1455,7 +1455,17 @@ a {
   color: var(--paper);
   font: 600 9px/1 var(--mono);
   letter-spacing: 0.1em;
-  pointer-events: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-map__tag:hover {
+  border-color: rgba(214, 255, 97, 0.55);
+  color: var(--acid);
+}
+
+.contact-map__tag b {
+  font-weight: 600;
+  opacity: 0.7;
 }
 
 .contact-map__tag i {
@@ -1464,6 +1474,16 @@ a {
   border-radius: 50%;
   background: var(--acid);
   box-shadow: 0 0 0 3px rgba(214, 255, 97, 0.22);
+}
+
+.contact-phone {
+  color: inherit;
+  border-bottom: 1px solid rgba(214, 255, 97, 0.45);
+  transition: color 0.2s ease;
+}
+
+.contact-phone:hover {
+  color: var(--acid);
 }
 
 .contact-form {

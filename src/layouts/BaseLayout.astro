@@ -90,6 +90,12 @@ const personSchema = {
       image: ogImageUrl.href,
       priceRange: "$$$",
       address,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 49.888,
+        longitude: -119.496,
+      },
+      hasMap: "https://www.google.com/maps/place/Kelowna,+BC",
       founder: { "@id": personId },
       provider: { "@id": personId },
       areaServed: [
@@ -126,6 +132,10 @@ const personSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; object-src 'none'"
+    />
     <script is:inline>
       // Clickjacking mitigation: break out if framed by another site.
       // GitHub Pages can't send X-Frame-Options, so this runs client-side.

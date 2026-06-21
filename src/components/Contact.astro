@@ -58,11 +58,11 @@ const lastUpdatedLabel = lastUpdated.toLocaleDateString("en-US", {
         referrerpolicy="no-referrer-when-downgrade"
         aria-label="Map showing Kelowna, British Columbia, where Mahatav Arora is based"
       ></iframe>
-      <span class="contact-map__tag" aria-hidden="true"><i></i>BASED IN KELOWNA, BC</span>
+      <a class="contact-map__tag" href="https://www.google.com/maps/place/Kelowna,+BC" target="_blank" rel="noopener noreferrer"><i></i>BASED IN KELOWNA, BC <b>↗</b></a>
     </div>
   </div>
   <div class="contact-footer">
-    <span>{profile.name} · {profile.location}</span>
+    <span>{profile.name} · {profile.location} · <a class="contact-phone" href={profile.phoneHref}>{profile.phone}</a></span>
     <div>
       <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
