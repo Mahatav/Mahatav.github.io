@@ -106,7 +106,7 @@
       "title": "Self-Flying Drone That Follows People",
       "year": "2024",
       "category": "vision",
-      "summary": "A drone that detects a person and flies itself to follow them, autonomously and in real time.",
+      "summary": "A drone that spots a person and flies itself to follow them, on its own and in real time.",
       "stack": ["Python", "YOLOv8", "OpenCV", "djitellopy"]
     },
     {
@@ -122,7 +122,7 @@
       "title": "Drone That Lands Itself",
       "year": "2023",
       "category": "vision",
-      "summary": "A drone that locates its own landing pad and touches down without a pilot.",
+      "summary": "A drone that finds its own landing pad and lands with no pilot.",
       "stack": ["Python", "OpenCV", "DroneKit", "Tesseract"]
     },
     {
@@ -130,7 +130,7 @@
       "title": "Banking Identity Checks",
       "year": "2024",
       "category": "ai",
-      "summary": "Identity-verification experiments that detect faces and confirm a real person is present, the way banking apps do.",
+      "summary": "Experiments that check identity by spotting faces and confirming a real person is there, like banking apps do.",
       "stack": ["YOLOv8", "dlib", "OpenCV", "Python"]
     }
   ],
@@ -139,7 +139,7 @@
       "title": "How AI Picks Up Bias",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "A study of how AI absorbs bias from its training data, comparing two models trained on very different philosophical texts.",
+      "summary": "A look at how AI picks up bias from its training data. I compared two models trained on very different philosophical texts.",
       "tags": ["PyTorch", "Hugging Face", "Cross-perplexity", "NLP evaluation"],
       "paperTitle": "Corpus-Conditioned Bias: Training GPT-2 Models on Eastern and Western Philosophical Texts",
       "paperPath": "research/Corpus_Conditioned_Bias.pdf",
@@ -149,7 +149,7 @@
       "title": "Spotting Human vs. AI Code",
       "period": "Jan–Apr 2026",
       "code": "DATA 448",
-      "summary": "A tool that determines whether code was written by a person or by AI, used to study how student work is changing.",
+      "summary": "A tool that checks whether code was written by a person or by AI. I used it to study how student work is changing.",
       "tags": ["CodeBERT", "Transformers", "Repository analysis", "Classification"],
       "paperTitle": "Pre-Post AI Comparisons: Behavioural Changes in Student Capstone Projects",
       "paperPath": "research/Pre_Post_AI_Comparisons.pdf",
@@ -159,14 +159,14 @@
       "title": "How Software Teams Work",
       "period": "Sep 2025–Apr 2026",
       "code": "COSC 447",
-      "summary": "A tool that analyzes how software teams collaborate, turning their day-to-day activity into clear, visual patterns.",
+      "summary": "A tool that studies how software teams work together. It turns their day-to-day activity into clear, visual patterns.",
       "tags": ["GitHub API", "NetworkX", "Graphviz", "Pandas"]
     },
     {
       "title": "Reading Jersey Numbers on TV",
       "period": "2026",
       "code": "COMPUTER VISION",
-      "summary": "A system that reads players' jersey numbers from broadcast soccer footage, even when the video is blurry or distant.",
+      "summary": "A system that reads players' jersey numbers from TV soccer footage, even when the video is blurry or far away.",
       "tags": ["SoccerNet", "YOLOv8 Pose", "PARSeq", "Vision-language models"],
       "paperTitle": "Jersey Number Recognition in Broadcast Soccer Video",
       "paperPath": "research/Jersey_Number_Recognition.pdf",
