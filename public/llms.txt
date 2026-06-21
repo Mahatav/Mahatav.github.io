@@ -1,13 +1,22 @@
 # Mahatav Arora
 
-> Full-stack developer and AI/ML researcher based in Kelowna, BC. I build expressive web systems, practical AI tools, and research pipelines that turn complicated material into something people can actually use. Available for select web and applied AI projects.
+> Freelance software developer, AI engineer, and designer based in Kelowna, BC, available for hire. I build custom software, AI tools, automation, web apps, and websites that help businesses work smarter, look credible, and win more customers. I handle each project end to end, from the first conversation through to launch, in plain English.
 
-This is the personal portfolio of Mahatav Arora, a B.Sc. Computer Science student (Data Science minor) at the University of British Columbia. Work spans freelance web platforms, full-stack systems, computer vision, and applied AI/ML research.
+This is the portfolio and hire page of Mahatav Arora, a B.Sc. Computer Science student (Data Science minor) at the University of British Columbia. If you are looking for someone to build software, an AI feature, an automation, a web app, or a website, this is the right place. Work serves clients in Kelowna, BC and remotely worldwide, and spans custom software, full-stack web apps, applied AI/ML, computer vision, and research pipelines.
 
 ## Main page
 
-- [Portfolio home](https://mahatav.github.io/): Overview of selected work, build experiments, research, and contact details.
+- [Portfolio home](https://mahatav.github.io/): Overview of selected work, services and pricing, build experiments, research, and contact details.
 - [Resume (PDF)](https://mahatav.github.io/Mahatav_Arora_Resume.pdf): Full CV with education, experience, and skills.
+
+## Services and pricing
+
+Custom software, AI, automation, web apps, and websites for businesses. Ranges below are Kelowna-market starting points; every project is quoted after a short conversation.
+
+- Websites: marketing sites, online booking, and SEO. Fast, professional, built to get found on Google. From $1,500 to $3,500 CAD.
+- Web Apps & Tools: custom web applications and internal tools built from scratch — dashboards, customer portals, booking systems, and integrations with existing systems. From $6,000 to $15,000 CAD.
+- Software & AI Systems: bespoke software, AI features, workflow automation, data pipelines, and full custom systems built around how a business works. From $15,000 CAD and up.
+- Standalone SEO: technical fixes, speed, local search and maps visibility, and reporting, whether or not Mahatav built the site.
 
 ## Selected work
 
@@ -27,5 +36,6 @@ This is the personal portfolio of Mahatav Arora, a B.Sc. Computer Science studen
 
 - [GitHub](https://github.com/Mahatav): Open-source projects and code.
 - [LinkedIn](https://linkedin.com/in/mahatav-arora): Professional profile and contact.
-- [Contact form](https://mahatav.github.io/#contact): Reach out about web and applied AI projects.
+- [Contact form](https://mahatav.github.io/#contact): Reach out about a software, AI, automation, web app, or website project. Fastest way to start.
 - Email: mahatavarora@gmail.com
+- Location: Kelowna, BC, Canada. Available remotely worldwide. Currently booking new projects.

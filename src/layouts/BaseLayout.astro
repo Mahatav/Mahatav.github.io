@@ -11,12 +11,44 @@ const { title, description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL("og-image.png", Astro.site);
 
-const { profile, skills } = data;
+const { profile, skills, packages, faq } = data;
 const siteUrl = Astro.site?.toString() ?? "";
 const personId = `${siteUrl}#person`;
+const businessId = `${siteUrl}#business`;
 const buildDate = new Date().toLocaleDateString("en-CA", {
   timeZone: "America/Vancouver",
 });
+
+const address = {
+  "@type": "PostalAddress",
+  addressLocality: "Kelowna",
+  addressRegion: "BC",
+  addressCountry: "CA",
+};
+
+// Build machine-readable Offers from the visible pricing tiers, parsing the
+// dollar figures out of each tier's price label (e.g. "$6,000 – $15,000 CAD").
+const offers = packages.tiers.map((tier) => {
+  const amounts = (tier.price.match(/[\d,]+/g) ?? []).map((n) =>
+    Number(n.replace(/,/g, "")),
+  );
+  const priceSpecification = amounts.length
+    ? {
+        "@type": "PriceSpecification",
+        priceCurrency: "CAD",
+        minPrice: amounts[0],
+        ...(amounts.length > 1 ? { maxPrice: amounts[1] } : {}),
+      }
+    : undefined;
+  return {
+    "@type": "Offer",
+    name: tier.name,
+    category: tier.scope,
+    description: tier.blurb,
+    ...(priceSpecification ? { priceSpecification } : {}),
+  };
+});
+
 const personSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -38,18 +70,50 @@ const personSchema = {
       description: profile.intro,
       url: siteUrl,
       email: `mailto:${profile.email}`,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Kelowna",
-        addressRegion: "BC",
-        addressCountry: "CA",
-      },
+      address,
       knowsAbout: [
         ...skills.languages,
         ...skills.platforms,
         ...skills.data,
       ],
       sameAs: [profile.github, profile.linkedin, profile.instagram],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": businessId,
+      name: `${profile.name} — Software, AI & Web Development`,
+      description: profile.intro,
+      url: siteUrl,
+      email: `mailto:${profile.email}`,
+      image: ogImageUrl.href,
+      priceRange: "$$$",
+      address,
+      founder: { "@id": personId },
+      provider: { "@id": personId },
+      areaServed: [
+        { "@type": "City", name: "Kelowna" },
+        { "@type": "AdministrativeArea", name: "British Columbia" },
+        "Worldwide (remote)",
+      ],
+      serviceType: [
+        "Software development",
+        "AI development",
+        "Web application development",
+        "Web design",
+        "Workflow automation",
+        "Search engine optimization",
+      ],
+      sameAs: [profile.github, profile.linkedin, profile.instagram],
+      makesOffer: offers,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}#faq`,
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
     },
   ],
 };
@@ -73,7 +137,14 @@ const personSchema = {
       }
     </script>
     <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="theme-color" content="#9cafaa" />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -82,6 +153,10 @@ const personSchema = {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={`${profile.name} · ${profile.role}`} />
+    <meta name="geo.region" content="CA-BC" />
+    <meta name="geo.placename" content="Kelowna" />
+    <meta name="geo.position" content="49.8880;-119.4960" />
+    <meta name="ICBM" content="49.8880, -119.4960" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
