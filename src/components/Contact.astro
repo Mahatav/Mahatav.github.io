@@ -1,9 +1,12 @@
 ---
+// Section 07 — contact form (Web3Forms) plus the Kelowna map and footer.
+// The access key comes from an env var so it isn't hard-coded in source.
 import data from "../data/portfolio.json";
 
 const { profile } = data;
 const web3formsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
 
+// "Updated <date>" line in the footer, rendered in Pacific time at build.
 const lastUpdated = new Date();
 const buildTimeZone = "America/Vancouver";
 const lastUpdatedISO = lastUpdated.toLocaleDateString("en-CA", {
@@ -33,6 +36,8 @@ const lastUpdatedLabel = lastUpdated.toLocaleDateString("en-US", {
         <input type="hidden" name="access_key" value={web3formsAccessKey} />
         <input type="hidden" name="subject" value="New portfolio contact request" />
         <input type="hidden" name="from_name" value="Mahatav Portfolio" />
+        {/* Honeypot: hidden from users, but bots tend to tick it — Web3Forms
+            silently drops any submission where it's checked. */}
         <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty" />
 
         <label for="contact-name">

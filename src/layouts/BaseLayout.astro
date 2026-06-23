@@ -1,4 +1,7 @@
 ---
+// Shared HTML shell for the site: head metadata, social/OG tags, geo hints,
+// and the JSON-LD knowledge graph that search engines and AI crawlers read.
+// Every page renders its content into the <slot /> at the bottom.
 import "../styles/global.css";
 import data from "../data/portfolio.json";
 
@@ -13,8 +16,10 @@ const ogImageUrl = new URL("og-image.png", Astro.site);
 
 const { profile, skills, packages, faq } = data;
 const siteUrl = Astro.site?.toString() ?? "";
+// Stable @id anchors so the graph nodes below can reference one another.
 const personId = `${siteUrl}#person`;
 const businessId = `${siteUrl}#business`;
+// Stamped at build time (Pacific) so "dateModified" tracks each deploy.
 const buildDate = new Date().toLocaleDateString("en-CA", {
   timeZone: "America/Vancouver",
 });
@@ -49,6 +54,9 @@ const offers = packages.tiers.map((tier) => {
   };
 });
 
+// One linked graph describing the page, the person, the business, and the FAQ.
+// Keeping it in a single @graph (rather than scattered blocks) lets the nodes
+// cross-reference by @id and keeps search engines from seeing duplicates.
 const personSchema = {
   "@context": "https://schema.org",
   "@graph": [

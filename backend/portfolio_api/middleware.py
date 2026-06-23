@@ -1,4 +1,9 @@
 class DevCorsMiddleware:
+    """Allows the local Astro dev server (:4321) to call this API during
+    development. Intentionally permissive and dev-only — production serves the
+    site statically, so no cross-origin access is needed there.
+    """
+
     def __init__(self, get_response):
         self.get_response = get_response
 

@@ -1,4 +1,7 @@
 ---
+// Section 01 — the filterable grid of client work. Each card links straight
+// out to a live site when there's a URL, otherwise it opens the case-study
+// dialog (handled by the script in index.astro).
 import data from "../data/portfolio.json";
 
 const featured = data.featured as Array<Record<string, any>>;
@@ -23,6 +26,7 @@ const featured = data.featured as Array<Record<string, any>>;
   <div class="project-grid">
     {
       featured.map((project, index) => {
+        // Render as a link when the project ships live, a button otherwise.
         const CardControl = project.websiteUrl ? "a" : "button";
 
         return (

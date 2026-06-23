@@ -1,16 +1,10 @@
 ---
+// Section 06 — common questions. Visible copy only; the matching FAQPage
+// structured data lives in the shared graph in BaseLayout (kept in one place
+// to avoid duplicate schema).
 import data from "../data/portfolio.json";
 
 const { faq } = data;
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
-};
 ---
 
 <section class="section faq-section" id="faq">
@@ -26,5 +20,4 @@ const faqSchema = {
       </div>
     ))}
   </dl>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </section>

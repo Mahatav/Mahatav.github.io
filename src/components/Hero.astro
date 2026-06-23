@@ -1,8 +1,11 @@
 ---
+// Above-the-fold hero: headline, the orbiting "atom" portrait, the live status
+// console, and the floating shortcut cards that open each featured project.
 import data from "../data/portfolio.json";
 
 const { profile } = data;
 const featured = data.featured as Array<Record<string, any>>;
+// Maps each featured project (by index) to a scattered position on the canvas.
 const orbitPositions = [
   "orbit-card--one",
   "orbit-card--two",
